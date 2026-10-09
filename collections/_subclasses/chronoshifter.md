@@ -28,6 +28,7 @@ You learn additional spells when you reach certain levels in this class, as show
 | 5th            | [Desynchronize](/dnd/spells/desynchronize), [Slow](https://dnd5e.wikidot.com/spell:slow) |
 | 7th            | [Recall](/dnd/spells/recall), [Divination](https://dnd5e.wikidot.com/spell:divination) |
 | 9th            | [Supercede](/dnd/spells/supercede), [Temporal Shunt](https://dnd5e.wikidot.com/spell:temporal-shunt) |
+| 11th           | [Scatter](https://dnd5e.wikidot.com/spell:scatter) |
 
 ### Timeline Desynchronization
 You innately have the ability to subtly affect the flow of time, even reversing in small bursts. However, using these abilities causes destabilization of the time stream, which can lead to devastating results.  
@@ -47,6 +48,12 @@ At 1st level, you have two Temporal points, which recharge after a long rest. If
 | 6  | You are dazed until the end of your next turn as you lose grip on your time stream. |
 | 7  | You cause a ripple in time as creatures and the area around you are slightly altered, oftentimes detrimental to your goals. Creatures might be more hostile, environments more deadly, or a new enemy may appear in the midst of a battle. Only you are aware of the change. |
 | 8  | The area around you is suddenly desynchronized from the timeline, causing all creatures within 10 ft. to make an unmodified roll on this table, ignoring this result on subsequent rolls. |
+| 9  | Your mind is temporarily scattered and you suffer the effects of the Confusion spell. |
+| 10 | Your facial muscles go slack from the cracks in the timeline and you are unable to speak until the end of your next turn. |
+| 11 | Your mind is torn asunder from your manipulations of time, take 4d12 + your level psychic damage. |
+| 12 | You suffer multiple side effects of desynchronization, reroll on the table twice, ignoring this effect on subsequent rolls. |
+| 13 | A time wraith is summoned, created from a total destabilization of the timeline in order to correct it. The time wraith is hostile against you and always knows where you are. It can even travel between the planes and through time with you. After a time wraith is defeated, reset the modifier for future Desynchronization rolls. |
+| 14 | A major rift in time is created, causing parts of the world or people to be altered, removed, or introduced around you, often detrimental to your goals. Everyone is aware of the sudden change. |
 
 You gain an extra Temporal point at 6th, 14th, and 18th level.
 
@@ -60,7 +67,7 @@ Also at 1st level, you are able to adjust the time stream of creatures and solid
     - **Quicker Perception.** Grant the creature disadvantage on Dexterity checks and saving throws, a minus to To Hit rolls equal to your proficiency bonus, or decrease their movement equal to five times your proficiency bonus (to a minimum of 5 ft.).
 
 ### Disrupt Timestream
-At 6th level, you can force a creature to desynchronize from the timeline. When a creature is affected by one of your spells, you may spend a Sorcery point to force it to roll on the Desynchronization table. You may now also use Temporal Points in place of Sorcery points, but not the other way around.
+At 6th level, you can force a creature to desynchronize from the timeline. When a creature is affected by one of your spells, you may spend a Temporal point to force it to roll on the Desynchronization table. You may now also use Temporal Points in place of Sorcery points, but not the other way around.
 
 ### Temporal Takeback
 At 14th level, you may spend a Temporal point to reverse time in a localized area by a few seconds, reversing the effects of an action, bonus action, or section of conversation. You may spend three sorcery points to make a number of creatures up to your Charisma modifier not remember the events that were reversed, otherwise all creatures remember. Once this feature is used, it can not be used again for 1 minute.

@@ -320,6 +320,8 @@ table[id] {
    ========================================================================== */
 
 .section-content .paragraph {
+    font-size: 16px;
+    line-height: 1.5;
     color: var(--muted);
 }
 
@@ -375,35 +377,35 @@ li.acknowledgement.notes{
     color: var(--fg);
     font-size: 28px;
     font-weight: 700;
-    margin-top: 24px;
+    margin-top: 2.25rem;
 }
 
 .section-content .header {
     color: var(--fg);
     font-size: 24px;
     font-weight: 600;
-    margin-top: 24px;
-    margin-bottom: 16px;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .section-content .subheader {
     color: var(--fg);
     font-size: 20px;
-    font-weight: 600;
-    margin-top: 20px;
-    margin-bottom: 12px;
+    font-weight: 700;
+    margin-top: 1.75rem;
+    margin-bottom: 0.35rem;
 }
 
 .section-content .subsubheader {
     color: var(--fg);
     font-size: 18px;
     font-weight: 550;
-    margin-top: 12px;
-    margin-bottom: 8px;
+    margin-top: 1.5rem;
+    margin-bottom: 0.2rem;
 }
 
 .section-content .bold {
-    font-weight: 600;
+    font-weight: 525;
     color: var(--fg);
 }
 
@@ -585,7 +587,7 @@ li.acknowledgement.notes{
 /* Break Elements */
 .break {
     display: block;
-    height: 1em;
+    height: 1.5em;
     width: 100%;
     clear: both;
 }
@@ -824,6 +826,18 @@ tr:hover {
 
 tr:last-child td {
     border-bottom: none;
+}
+
+.class-table table {
+    font-size: 14px;
+}
+
+.class-table th,td {
+    padding: 8px 12px;
+}
+
+.class-table th {
+    font-size: 12px;
 }
 
 @media (max-width: 900px) {

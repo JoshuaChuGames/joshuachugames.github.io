@@ -11,9 +11,9 @@ finished: false
 
 | Fighter Level | Features |
 |----------------|--------|
-| 3rd            | Flair, Articulate |
+| 3rd            | Flair |
 | 7th            | Flourish |
-| 10th           | Renown |
+| 11th           | Renown |
 | 15th           | Constant Guard |
 | 18th           | Coup de Grâce |
 
