@@ -6,7 +6,7 @@ content_type: Class
 custom_spells: true
 description: Far from the bustle of civilization or hidden in the alcoves of the city, those who study the old magic call themselves Witches. Rather than learn through academic scholarship, Witches experiment with the means around them, commune with spirits to learn their ways, and force the world to bend to their will through the ancient way of Magick.
 finished: true
-icon: fa-solid fa-hat-wizard fa-8x
+icon: fa-solid fa-broom fa-8x
 ---
 ***Far from the bustle of civilization or hidden in the alcoves of the city, those who study the old magic call themselves Witches. Rather than learn through academic scholarship, Witches experiment with the means around them, commune with spirits to learn their ways, and force the world to bend to their will through the ancient way of Magick. Wielding hexes, curses, and their signature magick, these mages often find themselves persecuted by society or forced to hide their gifts to stay within it.***
 
