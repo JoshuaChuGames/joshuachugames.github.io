@@ -26,28 +26,28 @@ At 3rd level, you have controlled your curse with occasional exposure to silver,
 When you transform, you revert back to your normal form after 10 minutes have passed, you die, or you revert back as a bonus action.
 
 While transformed, you gain the following benefits:
-- **Monstrous Might.** Your Strength and Dexterity scores are swapped. This does not affect items or other effects that affect your ability score. You also gain advantage on Strength checks and saving throws.
-- **Feral Resilience.** You gain 1d10 + your Witch level temporary hit points and resistance to non-silvered, non-magical bludgeoning, piercing, and slashing damage.
-- **Apex Predator.** You gain two monstrous limbs that can be used for unarmed strikes. When you make an unarmed strike, you may make another unarmed strike as a bonus action on your turn. The die for your unarmed strikes becomes 1d6, increasing to 1d8 at 7th level and 1d10 at 11th level.
-- **Hunter's Grace.** Your movement speed increases by 10 ft.
-- **Beast's Mind.** You have disadvantage on Concentration checks.
-- **Grotesque Form.** You do not add your proficiency bonus to weapons not specifically made for your form.
-- **Silver Weakness.** Damage from a silvered weapon suppresses Hunter's Grace and Monstrous Might until the end of your next turn.
+- **Monstrous Might.** You gain advantage on Strength checks and saving throws. Also, your Strength and Dexterity scores are swapped to the other. This does not affect items or other effects that affect your ability score (i.e. a Belt of Giant Strength would not move the increase to your Dexterity Score). 
+- **Feral Resilience.** You also gain resistance to non-silvered bludgeoning, piercing, and slashing damage.
+- **Apex Predator.** You gain two monstrous limbs that can be used for unarmed strikes. When you make an unarmed stike, you may make another unarmed strike as a bonus action on your turn. The die for your unarmed strikes becomes 1d6, increasing to 1d8 at 7th level and 1d10 at 11th level.
+- **Hunter’s Grace.** Your movement speed increases by 10 ft.
+- **Beast’s Mind.** Your focus is hindered as you have to maintain control in your new form. You have disadvantage on Concentration checks. 
+- **Grotesque Form.** Your new form is unable to wield weapons effectively. You do not add your proficiency bonus to weapons not specifically made for your form.
+- **Silver Weakness.** If you take damage from a silvered weapon, you lose the movement speed from Hunter’s Grace and the advantages from Monstrous Might until the end of your next turn.
 
 Once used, this feature cannot be used again until you finish a short or long rest.
 
 ### Forged in Silver
-Also at 3rd level, you gain proficiency with light armor, simple weapons, and martial weapons. Also, you adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again.
+At 3rd level, your training included martial training to give you the discipline to maintain control. You gain proficiency in light armor and 3 weapons of your choice. Also, you adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again.
 - **Archery.** You gain a +2 bonus to attack rolls you make with ranged weapons.
 - **Dueling.** When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.
 - **Two-Weapon Fighting.** When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack.
 
 
 ### Extra Attack
-At 6th level, you can attack twice when you take the Attack action. Once per turn when you succeed on a weapon attack, you may expend a Magick to apply its effects to the target.
+Starting at 6th level, you can attack twice, instead of once, whenever you take the Attack action on your turn. Also, once per turn when you succeed on a weapon attack, you may expend a Magick to apply its effects to the target.
 
 ### Regenerate
-At 10th level, while transformed and above 0 hit points, you gain 1d4 + your proficiency bonus temporary hit points at the start of your turn.
+At 10th level, your lycanthropy heals you to keep you alive. While you are transformed and have more than 0 hit points, you regain 1d4 + your proficiency bonus hit points at the start of your turn. If you take damage from a silvered weapon, this feature has no effect until the end of your next turn.
 
 ### Perfect Form
-At 14th level, you can transform and revert at will, though you gain Feral Resilience's temporary hit points only once per short or long rest. You also have advantage on all unarmed strikes while transformed.
+At 14th level, your curse becomes your greatest tool. You can transform and revert back at will. Also, you gain advantage on all unarmed strikes while you are transformed.
