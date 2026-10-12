@@ -15,5 +15,4 @@ spell_lists:
  - list: Witch
 finished: false
 ---
-Lace charming magic into food or drink no greater in volume than a cubic foot. When a creature consumes it, it must make a Wisdom saving throw. On a failure, it becomes Charmed by you for 1 hour if you are visible; otherwise it becomes Charmed by the first creature it sees. The Charmed condition ends if the creature it is Charmed by or that creature's companions harm it.
-
+Lace charming magic into food or drink no greater in volume than a cubic foot. When a creature consumes the food or drink, they must make a Wisdom saving throw. On a failure, they become Charmed by you for 1 hour if you are visible to them. If you are not visible, they become Charmed by the first creature they see. The Charmed condition ends if the creature the target is Charmed by or their companions harm the target.

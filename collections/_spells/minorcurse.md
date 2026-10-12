@@ -16,11 +16,10 @@ spell_lists:
  - list: Witch
 finished: false
 ---
-Weave malevolent words and movements to invoke harm on a creature you can see within 60 ft. The target must succeed on a saving throw against one of the following effects:
-
-- **Strength:** The target becomes feeble, imposing disadvantage on Strength checks. It repeats the saving throw at the end of its turn.
-- **Dexterity:** The target falls Prone and cannot end the condition by standing up until the spell ends. It repeats the saving throw at the end of its turn.
-- **Constitution:** The target gets an upset stomach and has the need to relieve itself.
-- **Wisdom:** The target begins hearing disembodied voices around it.
-- **Intelligence:** The target is unable to read or write any languages but is still able to speak. It repeats the saving throw at the end of its turn.
-- **Charisma:** The target loses all eloquence in speech, imposing disadvantage on Charisma checks until the spell ends. It repeats the saving throw at the end of its turn.
+Weave malevolent words and movements to invoke harm on a creature you can see within 60 ft. You inflict one of the following effects onto the target:
+- The target must succeed a Strength saving throw or become feeble, forcing them to roll a d4 and subtract the value to all Strength checks. They reroll the saving throw at the end of their turn.
+- The target must succeed a Dexterity saving throw or become clumsy, forcing them to roll a d4 and subtract the value to all Dexterity checks. They reroll the saving throw at the end of their turn.
+- The target must succeed a Constitution saving throw or else they get an upset stomach and have the need to relieve themselves.
+- The target must succeed a Wisdom saving throw or begin hearing disembodied voices around them.
+- The target must succeed a Intelligence saving throw or be unable to read or write any languages. They are still able to speak. They reroll the saving throw at the end of their turn.
+- The target must succeed a Charisma saving throw or lose all eloquence in speech, imposing disadvantage on Charisma checks until the spell ends. They reroll the saving throw at the end of their turn.

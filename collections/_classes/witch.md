@@ -99,6 +99,7 @@ Intelligence is your spellcasting ability for your witch spells. Your magic come
 <div class="break"></div>
 
 **Spell save DC** = 8 + your proficiency bonus + your Intelligence modifier
+
 **Spell attack modifier** = your proficiency bonus + your Intelligence modifier
 
 
@@ -259,22 +260,27 @@ One target of the spell is leeched of their life force. The next time within 1 m
 
 #### Season of Change
 *Prerequisite: Level 5*
+
 Immediately after casting the spell or cantrip, you may exchange it for a different spell or cantrip in the Witch’s spell list. The new spell must be of the same level as the old one. The effects of this Magick are reverted upon taking a long rest.
 
 #### Curse of Endings
 *Prerequisite: Level 9*
+
 One target of the spell that is concentrating on a spell is inflicted with divine energy of the End. The target immediately makes a Concentration check against your Spell Save DC.
 
 #### Curse of Perpetuity
 *Prerequisite: Level 9*
+
 One target of the spell is instilled with divine energy of Perpetuity. For 1 minute, they have advantage on Concentration checks.
 
 #### Curse of Self-Doubt
 *Prerequisite: Level 5*
+
 One target of the spell has its mind turned against it. For 1 minute at the start of its turn, it must make an Intelligence saving throw. On a failure, they hesitate in their plans and may only take an action or bonus action on that turn. On a success, the effect ends.
 
 #### Silver Steel
 *Prerequisite: Level 5*
+
 One target of the spell is blessed with sharp silver for 1 minute. The creature’s weapon attacks count as Silvered and a +1 magical weapon, provided it does not already have an equal or greater bonus.
 <div class="break"></div>
 
@@ -282,17 +288,21 @@ One target of the spell is blessed with sharp silver for 1 minute. The creature�
 
 #### Safety
 *Prerequisite: Level 9*
+
 One target of the spell is surrounded by protective magic. The target has resistance to all damage types for 1 minute or until they take damage.
 
 #### Trade Wounds
 *Prerequisite: Level 9*
+
 One target of the spell is linked to your life force and vice versa. For 1 hour, both of you have resistance to all damage. However, when one of you takes damage, the other takes the same amount of damage. This effect ends if one of you is ever farther than 60 ft. of the other or one of you is brought below 0 Hit Points.
 
 #### Trial of Grasses
 *Prerequisite: Level 9*
+
 One target of the spell is inflicted with a painful process to open them up to change. For 1 minute, they have disadvantage on saving throws against transmutation spells or transformations.
 
 #### Curse of Domination
 *Prerequisite: Level 13*
+
 One target of the spell has their mind twisted against them. Immediately after casting the spell, you also cast the Dominate Person spell on the target, which lasts for 1 round.
 
