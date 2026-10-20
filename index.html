@@ -20,3 +20,32 @@ layout: base
         </div>
     </div>
 </section>
+
+<section class="content-section">
+    <div class="projects featured">
+        {% for game in site.games %}
+            {% if game.featured %}
+                <div class="project-column">
+                    <div class="project-card">
+                        <a href="{{ game.url }}">
+                            <div class="project-image" >
+                                    <img src="{{ site.url }}{{ game.image }}" alt="{{ game.title }}" />
+
+                            </div>
+                            <div class="project-content">
+                                <h1>{{ game.title }}</h1>
+                                <p class="project-date">{{ game.start_date }} - {{ game.end_date }}</p>
+                                <p>{{ game.short_description }}</p>
+                                <div class="project-tags">
+                                    {% for tag in game.tags %}
+                                        <div class="project-tag">{{ tag }}</div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>

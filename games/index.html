@@ -21,15 +21,20 @@ layout: base
         {% for game in site.games %}
             <div class="project-column">
                 <div class="project-card">
-                    <div class="project-image" >
-                        <a href="{{ game.url }}">
-                            <img src="{{ site.url }}{{ game.image }}" alt="{{ game.title }}" />
-                        </a>
-                    </div>
-                    <div class="project-content">
-                        <h2>{{ game.title }}</h2>
-                        <p>{{ game.description }}</p>
-                    </div>
+                    <a href="{{ game.url }}">
+                        <div class="project-image" >
+                                <img src="{{ site.url }}{{ game.image }}" alt="{{ game.title }}" />
+
+                        </div>
+                        <div class="project-content">
+                            <h1>{{ game.title }}</h1>
+                            <div class="project-tags">
+                                {% for tag in game.tags %}
+                                    <div class="project-tag">{{ tag }}</div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         {% endfor %}
