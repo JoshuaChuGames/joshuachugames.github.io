@@ -41,6 +41,20 @@ body {
     overflow: auto;
 }
 
+@media (max-width > 1200px) {
+    .not-wide-screen {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .wide-screen {
+        /* display: none !important; */
+    }
+}
+
+
+
 /* ==========================================================================
    TEXT Styles
    ========================================================================== */
@@ -273,11 +287,19 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
     padding: 2rem;
 }
 
 .projects.featured .project-column {
-    width: 33%;
+    max-height: 80vh;
+    max-width: 53vh;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    height: auto;
+    min-width: 275px;
 }
 
 .project-column {
@@ -333,6 +355,12 @@ nav {
 
 .project-content h1 {
     font-size: 1.75rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+.project-content p {
+    font-size: 1rem;
     margin: 0;
     margin-bottom: 0.5rem;
 }
@@ -406,7 +434,11 @@ p.project-date {
         width: 100%;
     }
     .project-content h1 {
-        font-size: 1.5rem;
+        font-size: 1.15rem;
+    }
+
+    .project-content p {
+        font-size: 0.85rem;
     }
 
     .project-tag {
