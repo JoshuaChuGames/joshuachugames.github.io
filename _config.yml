@@ -14,9 +14,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:name/
-  software:
+  softwares:
     output: true
-    permalink: /software/:name/
+    permalink: /softwares/:name/
   homepage:
     output: false
     permalink: /homepage/:name/
@@ -62,7 +62,7 @@ defaults:
     values: { layout: portfoliobase }
   - scope: { type: projects }
     values: { layout: portfoliobase }
-  - scope: { type: software }
+  - scope: { type: softwares }
     values: { layout: portfoliobase }
   - scope: { type: homepage }
     values: { layout: portfoliobase }

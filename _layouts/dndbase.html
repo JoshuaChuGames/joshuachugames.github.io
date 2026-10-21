@@ -1,0 +1,24 @@
+---
+layout: dnd
+---
+<section class="intro-content">
+        <div class="section-content">
+            <div class="breadcrumb">
+                <a href="{{ '/dnd/' | relative_url }}">D&D Homebrew</a> &gt; 
+                <a href="{{ '/dnd/' | relative_url }}#{{ page.collection }}">{{ page.collection | capitalize | replace: '-', ' ' }}</a> &gt; 
+                <span>{{ page.title }}</span>
+            </div>
+            
+            <div id="content-header" class="content-header">
+                {% if page.finished %}
+                <h1>{{ page.title }} <i class="fa-solid fa-star"></i></h1>
+                {% else %}
+                <h1>{{ page.title }}</h1>
+                {% endif %}
+                <p class="content-type">{{page.class | default: ''}} {{ page.content_type | default: page.collection | capitalize | replace: '-', ' ' }}</p>
+            </div>
+            
+        </div>
+</section>
+
+{{ content }}

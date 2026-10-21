@@ -1,0 +1,43 @@
+---
+layout: base
+---
+<section class="hero small">
+    <div class="hero-body">
+        <video autoplay muted playsinline loop>
+            <source src="/assets/hero_3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content text-centered line-height-small small all-caps">
+            <div class="bottom-line">
+                <h1>Software</h1>
+                <h3 class="wide-letter-spacing thin-letters">Explore my software projects!</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="projects">
+        {% for software in site.softwares %}
+            <div class="project-column">
+                <div class="project-card">
+                    <a href="{{ software.url }}">
+                        <div class="project-image" >
+                                <img src="{{ software.image | relative_url }}" alt="{{ software.title }}" />
+
+                        </div>
+                        <div class="project-content">
+                            <h1>{{ software.title }}</h1>
+                            <p class="project-date">{{ software.start_date }}{% if software.end_date and software.end_date != "" %} - {{ software.end_date }} {% endif %}</p>
+                            <div class="project-tags">
+                                {% for tag in software.tags %}
+                                    <div class="project-tag">{{ tag }}</div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>

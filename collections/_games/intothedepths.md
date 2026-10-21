@@ -7,9 +7,9 @@ projectlink: https://spiritboundstudios.itch.io/into-the-depths
 image: /assets/intothedepths.png
 permalink: /projects/intothedepths
 tags: [Roguelike, Godot, 2D]
+start_date: December 2023
+end_date: December 2024
 featured: true
-start_date: 2023-01-01
-end_date: 2023-06-01
 ---
 
 <div class="project-feature">

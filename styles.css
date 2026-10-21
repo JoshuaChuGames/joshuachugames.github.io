@@ -41,6 +41,13 @@ body {
     overflow: auto;
 }
 
+.error {
+    font-size: 6em;
+    text-align: center;
+    color: var(--fg-dark);
+    margin: 0 auto;
+}
+
 @media (max-width > 1200px) {
     .not-wide-screen {
         display: none !important;
@@ -53,14 +60,17 @@ body {
     }
 }
 
-
-
 /* ==========================================================================
    TEXT Styles
    ========================================================================== */
 
 .text-centered {
     text-align: center !important;
+    text-wrap: balance;
+}
+
+.no-margin {
+    margin: 0 !important;
 }
 
 .line-height-small {
@@ -97,6 +107,11 @@ body {
     background: linear-gradient(to right, transparent, var(--fg), transparent)
 }
 
+@media (max-width: 768px) {
+    .text-centered-mobile {
+        text-align: center !important;
+    }
+}
 /* ==========================================================================
    NAV Header
    ========================================================================== */
@@ -229,6 +244,10 @@ nav {
 
 .hero-buttons {
     margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .hero-buttons .button {
@@ -257,26 +276,59 @@ nav {
 
 .about-container {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
-    gap: 2rem;
+    align-items: center;
+    gap: 0 4rem;
     padding: 2rem;
     background-color: var(--bg-muted);
 }
 
 .profile-image {
     object-fit: cover;
-    width: 300px;
-    height: 300px;
+    width: clamp(200px, 22vw, 350px);
+    height: clamp(200px, 22vw, 350px);
+    aspect-ratio: 1/1;
     border-radius: 50%;
     overflow: hidden;
 }
 
 .about-content {
-    max-width: 600px;
-    overflow: wrap;
+    min-width: 300px;
+    text-wrap: wrap;
     color: var(--fg-dark);
+    width: 70%;
+    margin: auto;
+    font-size: 1.25rem;
+}
+
+.contact-container {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.contact-links a {
+    color: var(--fg-dark);
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    border: 1px solid var(--card);
+    border-radius: 1.5rem;
+    padding: 12px 24px;
+    transition: 0.15s ease-in-out;
+}
+
+.contact-container a:hover {
+    background: var(--card);
+    color: var(--fg);
 }
 
 /* ==========================================================================
@@ -292,22 +344,23 @@ nav {
 }
 
 .projects.featured .project-column {
-    max-height: 80vh;
-    max-width: 53vh;
+    max-height: 69vh;
+    max-width: 44vh;
+}
+
+.project-column {
     display: flex;
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 0;
     height: auto;
     min-width: 275px;
-}
-
-.project-column {
-    width: 20%;
+    max-width: 25vw;
     aspect-ratio: 2/3;
     padding: 0.75rem;
     transform: scale(0.95);
     transition: all 0.15s ease-in-out;
+    container-type: inline-size;
 }
 
 .project-column:hover {
@@ -354,15 +407,14 @@ nav {
 }
 
 .project-content h1 {
-    font-size: 1.75rem;
+    font-size: clamp(1.00rem, 7.5cqw, 3.25rem);
     margin: 0;
-    margin-bottom: 0.5rem;
 }
 
 .project-content p {
-    font-size: 1rem;
+    font-size: clamp(0.65rem, 4.5cqw, 1.15rem);
     margin: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
 }
 
 .project-tags {
@@ -374,7 +426,7 @@ nav {
 .project-tag {
     background: var(--highlight);
     color: var(--fg);
-    font-size: clamp(0.25rem, 1.5vw, 0.75rem);
+    font-size: clamp(0.5rem, 4.0cqw, 1.15rem);
     font-weight: 600;
     padding: 0.25rem 0.5rem;
     margin: 0.25rem;
@@ -382,7 +434,7 @@ nav {
 }
 
 p.project-date {
-    font-size: 1rem;
+    font-size: clamp(0.65rem, 4.5cqw, 1.15rem);
     color: var(--muted);
     font-style: italic;
     margin: 0;
@@ -392,25 +444,10 @@ p.project-date {
     .projects {
         max-width: 1400px;
     }
-    .project-column {
-        width: 20%;
-    }
-    .project-content h1 {
-        font-size: 1.35rem;
-    }
 }
 @media (max-width: 1200px) {
     .projects {
         max-width: 1100px;
-    }
-    .project-column {
-        width: 30%;
-    }
-    .project-content h1 {
-        font-size: 1.35rem;
-    }
-    .project-tag {
-        font-size: 0.75rem;
     }
 }
 
@@ -418,31 +455,11 @@ p.project-date {
     .projects {
         max-width: 700px;
     }
-    .project-column {
-        width: 50%;
-    }
-    .project-content h1 {
-        font-size: 1.25rem;
-    }
 }
 
 @media (max-width: 500px) {
     .projects {
         max-width: 400px;
-    }
-    .project-column {
-        width: 100%;
-    }
-    .project-content h1 {
-        font-size: 1.15rem;
-    }
-
-    .project-content p {
-        font-size: 0.85rem;
-    }
-
-    .project-tag {
-        font-size: 0.75rem;
     }
 }
 

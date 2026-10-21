@@ -1,5 +1,5 @@
 ---
-layout: race
+layout: dnd
 title: Forest Spirit
 collection: races
 content_type: Race

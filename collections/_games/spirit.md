@@ -6,8 +6,9 @@ short_description: A roguelike deckbuilder game where you fight monsters to grow
 projectlink: https://spiritboundstudios.itch.io/into-the-depths
 image: /assets/intothedepths.png
 permalink: /projects/intothedepths
-start_date: 2023-01-01
-end_date: 2023-06-01
+tags: [2D, Narrative, Godot]
+start_date: October 2025
+end_date: Present
 ---
 
 <div class="project-feature">
