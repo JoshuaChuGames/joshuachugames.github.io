@@ -82,63 +82,60 @@ layout: dndbase
     }
 </script>
 
-    <section class="dnd-content">
-        <div class="items-container">
-            <div class="rarity-tabs">
-                <button class="tab-button active" data-rarity="all" onclick="filterByRarity('all')">All Items</button>
-                <button class="tab-button" data-rarity="common" onclick="filterByRarity('common')">Common</button>
-                <button class="tab-button" data-rarity="uncommon" onclick="filterByRarity('uncommon')">Uncommon</button>
-                <button class="tab-button" data-rarity="rare" onclick="filterByRarity('rare')">Rare</button>
-                <button class="tab-button" data-rarity="very rare" onclick="filterByRarity('very rare')">Very Rare</button>
-                <button class="tab-button" data-rarity="legendary" onclick="filterByRarity('legendary')">Legendary</button>
-            </div>
-    
-            <table class="table-wrapper spell-list items-list">
-                <thead>
-                    <tr>
-                        <th><i class="fa-solid fa-star"></i></th>
-                        <th>Item Name</th>
-                        <th>Type</th>
-                        <th>Rarity</th>
-                        <th>Attuned</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% assign sorted_items = site.items %}
-                    {% assign sorted_items = sorted_items | group_by: "rarity_rank" %}
-                    {% assign sorted_items = sorted_items | sort: "name" %}
-                    {% for group in sorted_items %}
-                    {% assign g = group.items | sort: "title" %}
-                    {% for item in g %}
-                    {% if item.content_type == 'Item' %}
-                
-                    <tr data-item-type="{{ item.item_type }}" data-rarity="{{ item.rarity }}">
-                        <td>
-                            {% if item.finished %}
-                            <i class="fa-solid fa-star"></i>
-                            {% endif %}
-                        </td>
-                        <td><a href="{{ item.url }}">{{ item.title }}</a></td>
-                        <td>
-                            {{ item.item_type }}
-                        </td>
-                        <td>{{ item.rarity }}</td>
-                        <td>
-                            {% if item.attuned %}
-                            <span>Attuned</span>
-                            {% else %}
-                            <span>-</span>
-                            {% endif %}
-                        </td>
-                    </tr>
+<div class="items-container">
+    <div class="rarity-tabs">
+        <button class="tab-button active" data-rarity="all" onclick="filterByRarity('all')">All Items</button>
+        <button class="tab-button" data-rarity="common" onclick="filterByRarity('common')">Common</button>
+        <button class="tab-button" data-rarity="uncommon" onclick="filterByRarity('uncommon')">Uncommon</button>
+        <button class="tab-button" data-rarity="rare" onclick="filterByRarity('rare')">Rare</button>
+        <button class="tab-button" data-rarity="very rare" onclick="filterByRarity('very rare')">Very Rare</button>
+        <button class="tab-button" data-rarity="legendary" onclick="filterByRarity('legendary')">Legendary</button>
+    </div>
+
+    <table class="table-wrapper spell-list items-list">
+        <thead>
+            <tr>
+                <th><i class="fa-solid fa-star"></i></th>
+                <th>Item Name</th>
+                <th>Type</th>
+                <th>Rarity</th>
+                <th>Attuned</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% assign sorted_items = site.items %}
+            {% assign sorted_items = sorted_items | group_by: "rarity_rank" %}
+            {% assign sorted_items = sorted_items | sort: "name" %}
+            {% for group in sorted_items %}
+            {% assign g = group.items | sort: "title" %}
+            {% for item in g %}
+            {% if item.content_type == 'Item' %}
+        
+            <tr data-item-type="{{ item.item_type }}" data-rarity="{{ item.rarity }}">
+                <td>
+                    {% if item.finished %}
+                    <i class="fa-solid fa-star"></i>
                     {% endif %}
-                    {% endfor %}
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
-    </section>
-</body>
+                </td>
+                <td><a href="{{ item.url }}">{{ item.title }}</a></td>
+                <td>
+                    {{ item.item_type }}
+                </td>
+                <td>{{ item.rarity }}</td>
+                <td>
+                    {% if item.attuned %}
+                    <span>Attuned</span>
+                    {% else %}
+                    <span>-</span>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
 
 
 

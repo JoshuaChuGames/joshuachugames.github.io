@@ -2,29 +2,26 @@
 layout: dndbase
 ---
 
-<body>
-    <section class="dnd-content">
-        <div class="item-properties">
-            {% assign flavortext = page.item_category %}
-            {% if page.item_subtype %}
-            {% assign flavortext = flavortext | append: ' (' | append: page.item_subtype | append: '), ' %}
-            {% else %}
-            {% assign flavortext = flavortext | append: ', ' %}
-            {% endif %}
-            {% assign flavortext = flavortext | append: page.rarity %}
-            {% if page.attuned %}
-            {% assign flavortext = flavortext | append: ' (requires attunement' %}
-            {% if page.attunement_requirement != '' %}
-            {% assign flavortext = flavortext | append: ' ' | append: page.attunement_requirement | append: ')' %}
-            {% else %}
-            {% assign flavortext = flavortext | append: ')' %}
-            {% endif %}
-            {% endif %}
-            <span class="italic">{{ flavortext }}</span>
-            <div class="break"></div>
-        </div>
-        {{ content }}
-    </section>
+<div class="item-properties">
+    {% assign flavortext = page.item_category %}
+    {% if page.item_subtype %}
+    {% assign flavortext = flavortext | append: ' (' | append: page.item_subtype | append: '), ' %}
+    {% else %}
+    {% assign flavortext = flavortext | append: ', ' %}
+    {% endif %}
+    {% assign flavortext = flavortext | append: page.rarity %}
+    {% if page.attuned %}
+    {% assign flavortext = flavortext | append: ' (requires attunement' %}
+    {% if page.attunement_requirement != '' %}
+    {% assign flavortext = flavortext | append: ' ' | append: page.attunement_requirement | append: ')' %}
+    {% else %}
+    {% assign flavortext = flavortext | append: ')' %}
+    {% endif %}
+    {% endif %}
+    <span class="italic">{{ flavortext }}</span>
+    <div class="break"></div>
+</div>
+{{ content }}
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -33,7 +30,5 @@ layout: dndbase
         });
     });
 </script>
-</body>
-</html>
 
 

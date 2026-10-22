@@ -2,73 +2,69 @@
 layout: dndbase
 ---
 
-<body>
-    <section class="dnd-content">
-        {% if page.level == "00" %}
-        <span class="italic">{{ page.school }} Cantrip</span>
-        {% elsif page.level == "01" %}
-        <span class="italic">{{ page.school }} Sign</span>
-        {% else %}
-        {% if page.ritual %}
-        <span class="italic">{{ page.level }} level {{ page.school }} (Ritual)</span>
-        {% else %}
-        <span class="italic">{{ page.level }} level {{ page.school }}</span>
-        {% endif %}
-        {% endif %}
-        
-        <div class="break"></div> 
+{% if page.level == "00" %}
+<span class="italic">{{ page.school }} Cantrip</span>
+{% elsif page.level == "01" %}
+<span class="italic">{{ page.school }} Sign</span>
+{% else %}
+{% if page.ritual %}
+<span class="italic">{{ page.level }} level {{ page.school }} (Ritual)</span>
+{% else %}
+<span class="italic">{{ page.level }} level {{ page.school }}</span>
+{% endif %}
+{% endif %}
 
-        <div class="spell-properties">
-            <div class="spell-property">
-                <span class="bold">Casting Time:</span> {{ page.casting_time }}
-            </div>
-            <div class="spell-property">
-                <span class="bold">Range:</span> {{ page.range }}
-            </div>
-            <div class="spell-property">
-                <span class="bold">Components:</span> {{ page.components }}
-            </div>
-            <div class="spell-property">
-                <span class="bold">Duration:</span> {{ page.duration }}
-            </div>
-        </div>
-        <div class="break"></div>
-        {{ content }}
-        <div class="break"></div>
-        <div class="spell-lists">
-            {% if page.spell_lists %}
-              <span class="bold">Spell Lists:</span>
-              {% assign spell_link_items = '' | split: ', ' %}
-              {% assign known_class = false %}
-              {% for list in page.spell_lists %}
-                {% for class in site.classes %}
-                  {% if class.class == list.list %}
-                    {% assign link = '<a href="' | append: class.url | append: '">' | append: class.class | append: '</a>' %}
-                    {% assign spell_link_items = spell_link_items | push: link %}
-                    {% assign known_class = true %}
-                  {% endif %}
-                {% endfor %}
-                {% for subclass in site.subclasses %}
-                  {% if subclass.title == list.list %}
-                    {% assign link_text = subclass.class | append: ' (' | append: subclass.title | append: ')' %}
-                    {% assign link = '<a href="' | append: subclass.url | append: '">' | append: link_text | append: '</a>' %}
-                    {% assign spell_link_items = spell_link_items | push: link %}
-                    {% assign known_class = true %}
-                  {% endif %}
-                {% endfor %}
-              {% endfor %}
-              {% if known_class %}
-                {{ spell_link_items | join: ', ' }}
-              {% else %}
-                {% for list in page.spell_lists %}
-                  {% assign spell_link_items = spell_link_items | push: list.list %}
-                {% endfor %}
-                {{ spell_link_items | join: ', ' }}
-              {% endif %}
-            {% endif %}
-        </div>
+<div class="break"></div> 
+
+<div class="spell-properties">
+    <div class="spell-property">
+        <span class="bold">Casting Time:</span> {{ page.casting_time }}
     </div>
-</section>
+    <div class="spell-property">
+        <span class="bold">Range:</span> {{ page.range }}
+    </div>
+    <div class="spell-property">
+        <span class="bold">Components:</span> {{ page.components }}
+    </div>
+    <div class="spell-property">
+        <span class="bold">Duration:</span> {{ page.duration }}
+    </div>
+</div>
+<div class="break"></div>
+{{ content }}
+<div class="break"></div>
+<div class="spell-lists">
+    {% if page.spell_lists %}
+      <span class="bold">Spell Lists:</span>
+      {% assign spell_link_items = '' | split: ', ' %}
+      {% assign known_class = false %}
+      {% for list in page.spell_lists %}
+        {% for class in site.classes %}
+          {% if class.class == list.list %}
+            {% assign link = '<a href="' | append: class.url | append: '">' | append: class.class | append: '</a>' %}
+            {% assign spell_link_items = spell_link_items | push: link %}
+            {% assign known_class = true %}
+          {% endif %}
+        {% endfor %}
+        {% for subclass in site.subclasses %}
+          {% if subclass.title == list.list %}
+            {% assign link_text = subclass.class | append: ' (' | append: subclass.title | append: ')' %}
+            {% assign link = '<a href="' | append: subclass.url | append: '">' | append: link_text | append: '</a>' %}
+            {% assign spell_link_items = spell_link_items | push: link %}
+            {% assign known_class = true %}
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+      {% if known_class %}
+        {{ spell_link_items | join: ', ' }}
+      {% else %}
+        {% for list in page.spell_lists %}
+          {% assign spell_link_items = spell_link_items | push: list.list %}
+        {% endfor %}
+        {{ spell_link_items | join: ', ' }}
+      {% endif %}
+    {% endif %}
+</div>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -78,7 +74,6 @@ layout: dndbase
         });
     });
 </script>
-</body>
 
 
 

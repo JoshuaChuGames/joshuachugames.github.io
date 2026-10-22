@@ -41,7 +41,7 @@ body {
     background: var(--bg);
     color: var(--fg);
     line-height: 1.6;
-    scrollbar-gutter: stable;
+    scrollbar-gutter: auto;
     overflow: auto;
 }
 
@@ -69,7 +69,7 @@ body {
    ========================================================================== */
 h1 {
     color: var(--fg);
-    font-size: 2rem;
+    font-size: clamp(1.75rem, 4vw, 2rem);
     font-weight: 650;
     margin-top: 1rem;
     margin-bottom: 0.25rem;
@@ -77,7 +77,7 @@ h1 {
 
 h2 {
     color: var(--fg);
-    font-size: 1.75rem;
+    font-size: clamp(1.5rem, 3.5vw, 1.75rem);
     font-weight: 600;
     margin-top: 1rem;
     margin-bottom: 0.25rem;
@@ -85,7 +85,7 @@ h2 {
 
 h3 {
     color: var(--fg);
-    font-size: 1.5rem;
+    font-size: clamp(1.25rem, 3.0vw, 1.5rem);
     font-weight: 600;
     margin-top: 1rem;
     margin-bottom: 0.25rem;
@@ -93,7 +93,7 @@ h3 {
 
 h4 {
     color: var(--fg);
-    font-size: 1.25rem;
+    font-size: clamp(1.0rem, 2.5vw, 1.25rem);
     font-weight: 550;
     margin-top: 1rem;
     margin-bottom: 0.25rem;
@@ -101,7 +101,7 @@ h4 {
 
 p {
     color: var(--fg);
-    font-size: 1rem;
+    font-size: clamp(0.75rem, 2.0vw, 1rem);
     margin-top: 0;
     margin-bottom: 0.15rem;
 }
@@ -274,33 +274,9 @@ nav {
 
 /* Sections */
 .section {
-    padding: 16px 0;
+    padding: 24px 0;
     position: relative;
-}
-
-.section::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background-color: var(--border);
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-}
-
-.section.beginning::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background-color: var(--border);
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-top: 24px;
+    border-bottom: 2px solid var(--border);
 }
 
 .section.no-border {
@@ -815,7 +791,7 @@ table {
     border-radius: 8px;
     overflow: hidden;
     font-size: 16px;
-    padding: 24px 0;
+    padding: px 0;
 }
 
 th, td {
