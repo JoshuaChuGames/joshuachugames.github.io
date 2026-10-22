@@ -1,5 +1,5 @@
 ---
-layout: dnd
+layout: dndbase
 title: Oath of Protection
 content_type: Subclass
 custom_spells: false

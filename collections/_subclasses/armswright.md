@@ -1,5 +1,5 @@
 ---
-layout: dnd
+layout: dndbase
 title: Armswright
 content_type: Subclass
 custom_spells: true
@@ -104,4 +104,3 @@ Starting at 15th level, you have reached the pinnacle of your craft, granting yo
 ***Item: A simple or martial weapon with the ammunition property (requires attunement)*** 
 
 This magic weapon grants a +1 bonus to attack and damage rolls made with it when it's used to make a ranged attack. Also, the weapon’s normal and long ranges are increased by 10 ft, and it no longer has disadvantage when making attacks against a target within 5 ft.
-

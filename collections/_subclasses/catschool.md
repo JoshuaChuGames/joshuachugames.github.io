@@ -1,6 +1,6 @@
 ---
 
-layout: dnd
+layout: dndbase
 title: School of the Cat
 content_type: Subclass
 custom_spells: false

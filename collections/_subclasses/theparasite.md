@@ -1,5 +1,5 @@
 ---
-layout: dnd
+layout: dndbase
 title: The Parasite
 content_type: Subclass
 custom_spells: false

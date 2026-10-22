@@ -1,5 +1,5 @@
 ---
-layout: dnd
+layout: dndbase
 title: The Hybrid
 content_type: Subclass
 custom_spells: false

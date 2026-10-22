@@ -177,6 +177,14 @@ li {
     background: linear-gradient(to right, transparent, var(--fg), transparent)
 }
 
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: 600;
+}
+
 @media (max-width: 768px) {
     .text-centered-mobile {
         text-align: center !important;
@@ -309,12 +317,6 @@ nav {
     gap: 88px;
 }
 
-.section-content {
-    width: min(1200px, 90vw);
-    margin: 0 auto;
-    padding: 0 16px;
-}
-
 /* Section Icons */
 .section-icon {
     align-self: center;
@@ -351,8 +353,8 @@ table[id] {
 /* Intro Content */
 .intro-content {
     width: 100%;
-    border-bottom: 1px solid var(--border);
-    padding: 24px 0;
+    padding-top: 24px;
+    padding-bottom: 12px;
 }
 
 /* Table of Contents */
@@ -407,13 +409,13 @@ table[id] {
     margin-bottom: 8px;
 }
 
+.dnd-content {
+    padding: 12px 0 32px 0
+}
+
 /* ==========================================================================
    MARKDOWN CONTENT STYLES
    ========================================================================== */
-
-.section-content .paragraph {
-    color: var(--muted);
-}
 
 .acknowledgement {
     font-size: 18px;
@@ -463,55 +465,6 @@ li.acknowledgement.notes{
     position: relative;
 }
 
-.section-content .title {
-    color: var(--fg);
-    font-size: 28px;
-    font-weight: 700;
-    margin-top: 24px;
-}
-
-.section-content .header {
-    color: var(--fg);
-    font-size: 24px;
-    font-weight: 600;
-    margin-top: 24px;
-    margin-bottom: 16px;
-}
-
-.section-content .subheader {
-    color: var(--fg);
-    font-size: 20px;
-    font-weight: 600;
-    margin-top: 20px;
-    margin-bottom: 12px;
-}
-
-.section-content .subsubheader {
-    color: var(--fg);
-    font-size: 18px;
-    font-weight: 550;
-    margin-top: 12px;
-    margin-bottom: 8px;
-}
-
-.section-content .bold {
-    font-weight: 600;
-    color: var(--fg);
-}
-
-.section-content .italic {
-    font-style: italic;
-}
-
-.section-content .link {
-    color: var(--brand);
-    text-decoration: none;
-}
-
-.section-content .link:hover {
-    text-decoration: underline;
-}
-
 @media (max-width: 900px) {
     .section-icon {
         display: none;
@@ -525,34 +478,6 @@ li.acknowledgement.notes{
         width: 96px;
         height: 96px;
         scale: 0.65;
-    }
-
-    .section-content .title {
-        font-size: 24px;
-        margin-top: 20px;
-        margin-bottom: 16px;
-    }
-
-    .section-content .header {
-        font-size: 20px;
-        margin-top: 20px;
-        margin-bottom: 12px;
-    }
-
-    .section-content .subheader {
-        font-size: 18px;
-        margin-top: 16px;
-        margin-bottom: 8px;
-    }
-
-    .section-content .subsubheader {
-        font-size: 16px;
-        margin-top: 8px;
-        margin-bottom: 8px;
-    }
-
-    .section-content {
-        font-size: 14px;
     }
 }
 
@@ -586,7 +511,6 @@ li.acknowledgement.notes{
 
 /* Content Headers */
 .content-header {
-    margin-bottom: 16px;
     padding-bottom: 16px;
     border-bottom: 1px solid var(--border);
 }
@@ -891,6 +815,7 @@ table {
     border-radius: 8px;
     overflow: hidden;
     font-size: 16px;
+    padding: 24px 0;
 }
 
 th, td {
@@ -920,14 +845,14 @@ tr:last-child td {
 
 @media (max-width: 900px) {
     .class-table .table-wrapper {
+        width: 100%;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
         position: relative;
     }
 
     .class-table table {
-        min-width: 900px;
-        max-width: 100%;
+        /*min-width: 900px;*/
         border-collapse: separate;
         overflow: visible;         /* overrides your global overflow:hidden on table */
         border-spacing: 0;

@@ -3,90 +3,72 @@ layout: dndbase
 ---
 
 <body>
-    <section class="intro-content">
-        <div class="section-content">
-            <div class="breadcrumb">
-                <a href="{{ '/dnd/' | relative_url }}">D&D Homebrew</a> &gt; 
-                <a href="{{ '/dnd/' | relative_url }}#{{ page.collection }}">{{ page.collection | capitalize | replace: '-', ' ' }}</a> &gt; 
-                <span>{{ page.title }}</span>
-            </div>
-            
-            <div id="content-header" class="content-header">
-                {% if page.finished %}
-                <h1>{{ page.title }} <i class="fa-solid fa-star"></i></h1>
-                {% else %}
-                <h1>{{ page.title }}</h1>
-                {% endif %}
-                <p class="content-type">{{page.class | default: ''}} {{ page.content_type | default: page.collection | capitalize | replace: '-', ' ' }}</p>
-            </div>
-            
-            <div id="markdown-content">
-                {% if page.level == "00" %}
-                <span class="italic">{{ page.school }} Cantrip</span>
-                {% elsif page.level == "01" %}
-                <span class="italic">{{ page.school }} Sign</span>
-                {% else %}
-                {% if page.ritual %}
-                <span class="italic">{{ page.level }} level {{ page.school }} (Ritual)</span>
-                {% else %}
-                <span class="italic">{{ page.level }} level {{ page.school }}</span>
-                {% endif %}
-                {% endif %}
-                
-                <div class="break"></div> 
+    <section class="dnd-content">
+        {% if page.level == "00" %}
+        <span class="italic">{{ page.school }} Cantrip</span>
+        {% elsif page.level == "01" %}
+        <span class="italic">{{ page.school }} Sign</span>
+        {% else %}
+        {% if page.ritual %}
+        <span class="italic">{{ page.level }} level {{ page.school }} (Ritual)</span>
+        {% else %}
+        <span class="italic">{{ page.level }} level {{ page.school }}</span>
+        {% endif %}
+        {% endif %}
+        
+        <div class="break"></div> 
 
-                <div class="spell-properties">
-                    <div class="spell-property">
-                        <span class="bold">Casting Time:</span> {{ page.casting_time }}
-                    </div>
-                    <div class="spell-property">
-                        <span class="bold">Range:</span> {{ page.range }}
-                    </div>
-                    <div class="spell-property">
-                        <span class="bold">Components:</span> {{ page.components }}
-                    </div>
-                    <div class="spell-property">
-                        <span class="bold">Duration:</span> {{ page.duration }}
-                    </div>
-                </div>
-                <div class="break"></div>
-                {{ content }}
-                <div class="break"></div>
-                <div class="paragraph spell-lists">
-                    {% if page.spell_lists %}
-                      <span class="bold">Spell Lists:</span>
-                      {% assign spell_link_items = '' | split: ', ' %}
-                      {% assign known_class = false %}
-                      {% for list in page.spell_lists %}
-                        {% for class in site.classes %}
-                          {% if class.class == list.list %}
-                            {% assign link = '<a href="' | append: class.url | append: '">' | append: class.class | append: '</a>' %}
-                            {% assign spell_link_items = spell_link_items | push: link %}
-                            {% assign known_class = true %}
-                          {% endif %}
-                        {% endfor %}
-                        {% for subclass in site.subclasses %}
-                          {% if subclass.title == list.list %}
-                            {% assign link_text = subclass.class | append: ' (' | append: subclass.title | append: ')' %}
-                            {% assign link = '<a href="' | append: subclass.url | append: '">' | append: link_text | append: '</a>' %}
-                            {% assign spell_link_items = spell_link_items | push: link %}
-                            {% assign known_class = true %}
-                          {% endif %}
-                        {% endfor %}
-                      {% endfor %}
-                      {% if known_class %}
-                        {{ spell_link_items | join: ', ' }}
-                      {% else %}
-                        {% for list in page.spell_lists %}
-                          {% assign spell_link_items = spell_link_items | push: list.list %}
-                        {% endfor %}
-                        {{ spell_link_items | join: ', ' }}
-                      {% endif %}
-                    {% endif %}
-                  </div>
+        <div class="spell-properties">
+            <div class="spell-property">
+                <span class="bold">Casting Time:</span> {{ page.casting_time }}
+            </div>
+            <div class="spell-property">
+                <span class="bold">Range:</span> {{ page.range }}
+            </div>
+            <div class="spell-property">
+                <span class="bold">Components:</span> {{ page.components }}
+            </div>
+            <div class="spell-property">
+                <span class="bold">Duration:</span> {{ page.duration }}
             </div>
         </div>
-    </section>
+        <div class="break"></div>
+        {{ content }}
+        <div class="break"></div>
+        <div class="spell-lists">
+            {% if page.spell_lists %}
+              <span class="bold">Spell Lists:</span>
+              {% assign spell_link_items = '' | split: ', ' %}
+              {% assign known_class = false %}
+              {% for list in page.spell_lists %}
+                {% for class in site.classes %}
+                  {% if class.class == list.list %}
+                    {% assign link = '<a href="' | append: class.url | append: '">' | append: class.class | append: '</a>' %}
+                    {% assign spell_link_items = spell_link_items | push: link %}
+                    {% assign known_class = true %}
+                  {% endif %}
+                {% endfor %}
+                {% for subclass in site.subclasses %}
+                  {% if subclass.title == list.list %}
+                    {% assign link_text = subclass.class | append: ' (' | append: subclass.title | append: ')' %}
+                    {% assign link = '<a href="' | append: subclass.url | append: '">' | append: link_text | append: '</a>' %}
+                    {% assign spell_link_items = spell_link_items | push: link %}
+                    {% assign known_class = true %}
+                  {% endif %}
+                {% endfor %}
+              {% endfor %}
+              {% if known_class %}
+                {{ spell_link_items | join: ', ' }}
+              {% else %}
+                {% for list in page.spell_lists %}
+                  {% assign spell_link_items = spell_link_items | push: list.list %}
+                {% endfor %}
+                {{ spell_link_items | join: ', ' }}
+              {% endif %}
+            {% endif %}
+        </div>
+    </div>
+</section>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {

@@ -14,7 +14,7 @@ icon: fa-solid fa-flask fa-8x
 *You must have a Dexterity score or Strength score and a Wisdom score of 13 or higher in order to multiclass in or out of this class.*
 
 <div class="class-table">
-
+<div class="table-wrapper">
 <table>
 <tr><th colspan="2">The Witcher</th></tr>
 <tr><th>Level</th><th>Proficiency Bonus</th><th>Features</th><th>Signs Known</th></tr>
@@ -39,7 +39,7 @@ icon: fa-solid fa-flask fa-8x
 <tr><td>19th</td><td>+6</td><td>Ability Score Improvement, Martial Versatility (Optional)</td><td>5</td></tr>
 <tr><td>20th</td><td>+6</td><td>Master of the Path</td><td>5</td></tr>
 </table>
-
+</div>
 </div>
 
 ## Class Features

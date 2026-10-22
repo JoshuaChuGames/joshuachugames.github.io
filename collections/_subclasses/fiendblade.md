@@ -1,5 +1,5 @@
 ---
-layout: dnd
+layout: dndbase
 title: Fiendblade
 content_type: Subclass
 custom_spells: true
