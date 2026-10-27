@@ -5,7 +5,6 @@ description: A 2D roguelike deckbuilder inspired by the likes of Slay the Spire,
 short_description: A roguelike deckbuilder game where you fight monsters to grow more powerful, collecting new cards, items, and feats!
 projectlink: https://spiritboundstudios.itch.io/into-the-depths
 image: /assets/intothedepths.png
-permalink: /projects/intothedepths
 tags: [2D, Narrative, Godot]
 start_date: October 2025
 end_date: Present

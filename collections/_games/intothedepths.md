@@ -1,11 +1,22 @@
 ---
 layout: project
-title: Quest!
+title: Into the Depths
 description: A 2D roguelike deckbuilder inspired by the likes of Slay the Spire, developed in the Godot engine. It was created by me as the sole developer with the enemy art created by artist Yuuki Matsuda (@_yam.exe on Instagram). With a focus on replayability, I placed a strong emphasis on enemy variety and many possible builds for the player to create.
 short_description: A roguelike deckbuilder game where you fight monsters to grow more powerful, collecting new cards, items, and feats!
 projectlink: https://spiritboundstudios.itch.io/into-the-depths
 image: /assets/intothedepths.png
-permalink: /projects/intothedepths
+media: [
+    {
+        type: "image",
+        src: "/assets/intothedepths.png",
+        alt: "Into the Depths"
+    },
+    {
+        type: "video",
+        src: "/assets/hero_2.mp4",
+        alt: "Into the Depths - Hero Video"
+    }
+]
 tags: [Roguelike, Godot, 2D]
 start_date: December 2023
 end_date: December 2024
