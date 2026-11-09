@@ -1,50 +1,53 @@
 ---
-layout: portfoliobase
-custom_js: /js/advanced-content-loader.js
-page_type: 'project'
+layout: base
 ---
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Auto-load content from data attributes
-        loadAllContent();
-        const html = document.querySelector('html');
-        console.log('Loading content: ' + html.innerHTML);
-        html.innerHTML = convertToDivs(extractContentFromHtml(html.innerHTML));
-        console.log('Loading content: ' + html.innerHTML);
-        document.querySelector('#content-container').classList.remove('content-loading');
-        console.log('Content loaded: ' + document.querySelector('#content-container').innerHTML);
-    });
-</script>
-
-<body>
-    <div id="header-placeholder"></div>
-    <section class="intro-content">
-        <div class="section-content">
-            <div class="breadcrumb">
-                <a href="{{ '/index.html' | relative_url }}">Home</a> &gt; 
-                <span>{{ page.title }}</span>
+<section class="hero small">
+    <div class="hero-body">
+        <video autoplay muted playsinline loop>
+            <source src="/assets/hero_2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content text-centered line-height-small small">
+            <div class="bottom-line all-caps">
+                <h1>{{ page.title }}</h1>
+                <h3 class="wide-letter-spacing thin-letters">{{ page.subtitle }}</h3>
             </div>
-            <div class="content-header project">
-                <div class="project-header">
-                    <h1>{{ page.title }}</h1>
-                    <p> {{ page.description }}  </p>
-                    <a class="project-link" href="{{ page.projectlink }}" target="_blank" rel="noopener">Play Now</a>
-                </div>
-                <div class="project-image">
-                    <img src="{{ site.url }}{{ page.image }}" alt="{{ page.title }}" />
-                </div>
-                </div>
+            <p class="project-date">{{ page.start_date }}{% if page.end_date and page.end_date != "" %} - {{ page.end_date }} {% endif %}</p>
+            <div class="project-tags">
+            {% for tag in page.tags %}
+                <div class="project-tag">{{ tag }}</div>
+            {% endfor %}
+            </div>
+            <div class="project-links">
+                {% assign links = page.projectlinks %}
+                {% for link in links %}
+                    <a href="{{ link.url }}" class="project-link fa-2x {{ link.icon }}"></a>
+                {% endfor %}
             </div>
         </div>
-    </section>
-    
-    <section class="content-section">
-        <div class="section-content">
-            <div id="content-body">
-                {{ content }}
-            </div>  
-        </div>
-    </section>
-    <div id="footer-placeholder"></div>
-</body>
+    </div>
+</section>
+
+<section class="content-section project-content">
+    {% assign media = page.media %}
+    <!-- <div class="project-media-container">
+        {% for item in media %}
+            {% if item.type == "image" %}
+                <img class="project-media" src="{{ item.src | relative_url }}" alt="{{ item.alt | default: page.title }}" />
+            {% endif %}
+        {% endfor %}
+    </div> -->
+    <h1 class="text-centered all-caps bottom-line dark">Dev Logs</h1>   
+    <div class="project-media-container">
+        {% for item in media %}
+            {% if item.type == "video" %}
+                <video class="project-media" controls playsinline>
+                    <source src="{{ item.src | relative_url }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <h1 class="text-centered all-caps bottom-line dark">My Contributions</h1>   
+    {{ content }}
+</section> 

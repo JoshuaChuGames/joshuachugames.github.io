@@ -1,5 +1,5 @@
 ---
-layout: dnd
+layout: dndbase
 title: Way of The Force
 content_type: Subclass
 custom_spells: false

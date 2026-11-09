@@ -9,83 +9,60 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <link rel="stylesheet" href="/dnd/dndstyles.css">
-    
-    
-    
-    <script src="/js/advanced-content-loader.js"></script>
-    
 
 </head>
 
 <body>
-    <header>
-        <div class="header-container" data-pageType="dnd" data-layout="dnd" data-custom_js="/js/advanced-content-loader.js">
-            <nav>
-                <div style="display: flex; gap: 12px; align-items: center">
-                    <span class="pill">🎮 Joshua Chu</span>
-                    <span class="muted" style="font-size: 13px" data-short="Game Dev • Software Engineer • D&D Homebrew">Game Developer • Software Engineer • D&D Homebrew Creator</span>
-                </div>
-                <div class="links">
-                    <a href="/index.html">Home</a>
-                    <a href="/index.html#games" data-short="Games">Video Games</a>
-                    <a href="/index.html#software">Software</a>
-                    <a href="/dnd/">D&D</a>
-                    <a href="/index.html#about">About</a>
-                    <a href="/index.html#contact">Contact</a>
-                </div>
-            </nav>
-        </div>
-        <div class="header-container mobile" data-pageType="dnd" data-layout="dnd" data-custom_js="/js/advanced-content-loader.js">
-
-            <nav>
-                <div class="pill mobile">🎮 Joshua Chu</div>
-                <div class="links">
-                    <a href="/index.html">Home</a>
-                    <a href="/index.html#games" data-short="Games">Video Games</a>
-                    <a href="/index.html#software">Software</a>
-                    <a href="/dnd/">D&D</a>
-                    <a href="/index.html#about">About</a>
-                    <a href="/index.html#contact">Contact</a>
-                </div>
-            </nav>
-        </div>
+    <header data-pageType="" data-layout="dndbase" data-custom_js="">
+        <nav>
+            <div class="navbar-brand">
+                <span class="navbar-item">Joshua Chu</span>
+            </div>
+            <div class="navbar-links">
+                <a class="navbar-link" href="/">Home</a>
+                <a class="navbar-link" href="/games" data-short="Games">Video Games</a>
+                <a class="navbar-link" href="/software">Software</a>
+                <a class="navbar-link" href="/dnd/">D&D</a>
+                <a class="navbar-link" href="/#about">About</a>
+                <a class="navbar-link" href="/#about">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <header class="mobile" data-pageType="" data-layout="dndbase" data-custom_js="">
+        <nav>
+            <div class="navbar-brand">
+                <span class="navbar-item">Joshua Chu</span>
+            </div>
+            <div class="links">
+                <a class="navbar-link" href="/">Home</a>
+                <a class="navbar-link" href="/games" data-short="Games">Video Games</a>
+                <a class="navbar-link" href="/software">Software</a>
+                <a class="navbar-link" href="/dnd/">D&D</a>
+                <a class="navbar-link" href="/#about">About</a>
+                <a class="navbar-link" href="/#about">Contact</a>
+            </div>
+        </nav>
     </header>
 
-    <div id="content-container" class="content-loading">
-        <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Auto-load content from data attributes
-        loadAllContent();
-        const html = document.querySelector('html');
-        console.log('Loading content: ' + html.innerHTML);
-        html.innerHTML = convertToDivs(extractContentFromHtml(html.innerHTML));
-        console.log('Loading content: ' + html.innerHTML);
-        document.querySelectorAll('.fa-star').forEach(icon => {
-            icon.title = 'Playtested Material';
-        }); 
-        document.querySelector('#content-container').classList.remove('content-loading');
-    });
-</script>
+    <div id="content-container" class="content-container">
+        <section class="intro-content">
+    <div class="breadcrumb">
+        <a href="/dnd/">D&D Homebrew</a> &gt; 
+        <a href="/dnd/#subclasses">Subclasses</a> &gt; 
+        <span>Starborne</span>
+    </div>
+    
+    <div id="content-header" class="content-header">
+        
+        <h1>Starborne</h1>
+        
+        <p class="content-type">Sorcerer Subclass</p>
+    </div>            
+</section>
 
-    <section class="intro-content">
-        <div class="section-content">
-            <div class="breadcrumb">
-                <a href="/dnd/">D&D Homebrew</a> &gt; 
-                <a href="/dnd/#subclasses">Subclasses</a> &gt; 
-                <span>Starborne</span>
-            </div>
-            
-            <div id="content-header" class="content-header">
-                
-                <h1>Starborne</h1>
-                
-                <p class="content-type">Sorcerer Subclass</p>
-            </div>
-            
-            <div id="markdown-content">
-                <p><strong><em>At the moment of your birth, the stars had aligned in such a way that cosmic energy had reached a maximum. Some of that energy was absorbed into your skin, causing you to sparkle and be able to wield the power of the stars. Depending on the rarity of your specific alignment and the duration it was held for, you could either be one of many Starborne in your generation or the first in thousands of years.</em></strong></p>
+<section class="dnd-content">
+        <p><strong><em>At the moment of your birth, the stars had aligned in such a way that cosmic energy had reached a maximum. Some of that energy was absorbed into your skin, causing you to sparkle and be able to wield the power of the stars. Depending on the rarity of your specific alignment and the duration it was held for, you could either be one of many Starborne in your generation or the first in thousands of years.</em></strong></p>
 
 <p><strong><em>Starborne are one of many mysteries. Astronomers have tried for centuries to find a pattern amongst the stars, but what little order there is in the cosmos eludes their grasp. Thus, attempts at engineering the birth of a Starborne have failed. Their abilities are rare and very powerful, potentially dangerous. Even they do not quite understand the meaning or purpose behind their powers. Starborne have said to dissolve into twinkling lights when they pass away while others say they explode in a violent supernova upon death. There are reports of both, leaving wizards and scholars baffled.</em></strong></p>
 
@@ -244,93 +221,7 @@ At 7th level, you know the <a href="https://dnd5e.wikidot.com/spell:divination">
 <h3 id="celestial-charge">Celestial Charge</h3>
 <p>At 18th level, you become a natural fount of cosmic energy after resting. At the end of each long rest, you become Charged until the end of your next long rest.</p>
 
-            </div>
-            
-        </div>
-    </section>
+</section> 
+    </div>
 </body>
 </html>
-
-
-
-
-    </div>
-
-
-    <div id="acknowledgements" class="acknowledgements section">
-        <div class="section-content">
-            
-            
-
-            <h1>Playtested By:</h1>
-            <!-- Print the acknowledgement list -->
-            <!-- ACKNOWLEDGEMENT LIST INDEXES: -->
-            <!-- 0: display_style - realname_only, username_only, realname_username, username_realname, none -->
-            <!-- 1: playtester_name -->
-            <!-- 2: username -->
-            <!-- 3: character_name -->
-            <!-- 4: character_level -->
-            <!-- 5: notes -->
-            <!-- ACKNOWLEDGEMENT LIST INDEXES: -->
-            
-                <div id="no-playtesters">No playtesters found</div>
-            
-        </div>
-    </div>
-
-    <!-- Back to Top Button -->
-    <div id="back-to-top" class="back-to-top" style="display: none;">
-        <a href="#content-header">Back to Top</a>
-    </div>
-
-
-</body>
-</html>
-
-
-<script>    
-
-    console.log(document.querySelector('.header-container').dataset.pageType);
-    console.log(document.querySelector('.header-container').dataset.layout);
-
-    if (!document.querySelector('.header-container').dataset.custom_js) {
-        console.log('Removing content-loading class due to custom_js not being set');
-        document.querySelector('#content-container').classList.remove('content-loading');
-    }
-
-    if (document.querySelector('#no-playtesters')) {
-        document.querySelector('#acknowledgements').style.display = 'none';
-    }
-
-    // Back to Top Button Logic
-    function toggleBackToTop() {
-        const backToTopButton = document.getElementById('back-to-top');
-        const windowHeight = window.innerHeight;
-        const documentHeight = document.documentElement.scrollHeight;
-        
-        // Show button if page height is more than 2 screens worth
-        if (documentHeight > windowHeight * 1.25) {
-            backToTopButton.style.display = 'block';
-        } else {
-            backToTopButton.style.display = 'none';
-        }
-    }
-
-    // Check on page load and resize
-    document.addEventListener('DOMContentLoaded', toggleBackToTop);
-    window.addEventListener('resize', toggleBackToTop);
-
-    // Toggle notes dropdown
-    function toggleNotes(arrowElement) {
-        const dropdown = arrowElement.parentElement.querySelector('.notes-dropdown');
-        const isVisible = dropdown.style.display !== 'none';
-        
-        if (isVisible) {
-            dropdown.style.display = 'none';
-            arrowElement.textContent = '▶';
-        } else {
-            dropdown.style.display = 'block';
-            arrowElement.textContent = '▼';
-        }
-    }
-</script>

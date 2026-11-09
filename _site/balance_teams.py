@@ -93,30 +93,30 @@ if __name__ == '__main__':
     
     rank_map = {
         "unranked": -1,
-        "iron 1": 0,
-        "iron 2": 0,
-        "iron 3": 0,
-        "bronze 1": 0,
-        "bronze 2": 0,
-        "bronze 3": 0,
-        "silver 1": 0.5,
-        "silver 2": 0.5,
-        "silver 3": 0.5,
-        "gold 1": 1,
-        "gold 2": 2,
-        "gold 3": 3,
-        "platinum 1": 4,
-        "platinum 2": 5,
-        "platinum 3": 6,
-        "diamond 1": 7,
-        "diamond 2": 8,
-        "diamond 3": 9,
-        "ascendant 1": 10,
-        "ascendant 2": 11,
-        "ascendant 3": 12,
-        "immortal 1": 13,
-        "immortal 2": 14,
-        "immortal 3": 15,
+        "iron 1": 0.5,
+        "iron 2": 0.5,
+        "iron 3": 0.5,
+        "bronze 1": 0.5,
+        "bronze 2": 0.5,
+        "bronze 3": 0.5,
+        "silver 1": 1,
+        "silver 2": 1,
+        "silver 3": 1,
+        "gold 1": 2,
+        "gold 2": 3,
+        "gold 3": 4,
+        "platinum 1": 5,
+        "platinum 2": 6,
+        "platinum 3": 7,
+        "diamond 1": 8,
+        "diamond 2": 9,
+        "diamond 3": 10,
+        "ascendant 1": 11,
+        "ascendant 2": 12,
+        "ascendant 3": 13,
+        "immortal 1": 14,
+        "immortal 2": 15,
+        "immortal 3": 16,
         "radiant": 17,
     }
     player_list = []
@@ -130,9 +130,9 @@ if __name__ == '__main__':
         print(player.name, player.current_value, player.peak_value, player.player_value)
 
     max_players = 5
-    teams = [ [], [], []]
-    total_values = [0, 0, 0]
-    total_players = [0, 0, 0]
+    teams = [ [], [], [], []]
+    total_values = [0] * len(teams)
+    total_players = [0] * len(teams)
 
     # Sort players by player_value in descending order
     player_list.sort(key=lambda x: x.player_value, reverse=True)

@@ -1,5 +1,5 @@
 ---
-layout: dnd
+layout: dndbase
 title: Way of the Trapper
 content_type: Subclass
 custom_spells: false

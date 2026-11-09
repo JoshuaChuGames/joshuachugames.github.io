@@ -37,7 +37,6 @@ wizard_icon: fa-solid fa-wand-sparkles fa-8x
 {% for subclass in site.subclasses %}
 {% if subclass.class == class.class %}
 {% assign subclass_count = subclass_count | plus: 1 %}
-
 - [{{ subclass.title }}]({{ subclass.url }})
   {% endif %}
   {% endfor %}

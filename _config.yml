@@ -8,12 +8,15 @@ collections_dir: collections
 
 collections:
 # Portfolio Collections ---------------
+  games:
+    output: true
+    permalink: /games/:name/
   projects:
     output: true
     permalink: /projects/:name/
-  software:
+  softwares:
     output: true
-    permalink: /software/:name/
+    permalink: /softwares/:name/
   homepage:
     output: false
     permalink: /homepage/:name/
@@ -55,9 +58,11 @@ collections:
 
 defaults:
   # Portfolio Defaults ---------------
+  - scope: { type: games }
+    values: { layout: portfoliobase }
   - scope: { type: projects }
     values: { layout: portfoliobase }
-  - scope: { type: software }
+  - scope: { type: softwares }
     values: { layout: portfoliobase }
   - scope: { type: homepage }
     values: { layout: portfoliobase }

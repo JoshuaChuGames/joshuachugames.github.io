@@ -1,5 +1,5 @@
 ---
-layout: dnd
+layout: dndbase
 title: School of the Bear
 content_type: Subclass
 custom_spells: false

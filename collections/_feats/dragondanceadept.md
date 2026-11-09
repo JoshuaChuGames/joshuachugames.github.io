@@ -1,5 +1,5 @@
 ---
-layout: feat
+layout: dnd
 title: Dragon Dance Adept
 content_type: Feat
 prerequisites: ''

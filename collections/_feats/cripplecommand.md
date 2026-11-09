@@ -1,5 +1,5 @@
 ---
-layout: feat
+layout: dnd
 title: Cripple Command
 content_type: Feat
 prerequisites: ''

@@ -1,5 +1,5 @@
 ---
-layout: dnd
+layout: dndbase
 title: School of Inquisimancy
 content_type: Subclass
 custom_spells: true
@@ -58,4 +58,3 @@ Beginning at the 14th level, you are a master of manipulating the minds of other
 | 8  | The creature babbles random nonsense. Their turn ends. |
 | 9  | The creature wanders in a random direction. Their Turn Ends |
 | 10 | The creature momentarily becomes sane, using their actions and movement however they like. However, their sanity slips away when they end their turn. |
-

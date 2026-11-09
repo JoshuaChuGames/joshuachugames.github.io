@@ -1,5 +1,5 @@
 ---
-layout: feat
+layout: dnd
 title: Dragon Dance Mastery
 content_type: Feat
 prerequisites: ''

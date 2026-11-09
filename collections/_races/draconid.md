@@ -1,5 +1,5 @@
 ---
-layout: race
+layout: dnd
 title: Draconid
 collection: races
 content_type: Race

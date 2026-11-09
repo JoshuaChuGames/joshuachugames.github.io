@@ -1,5 +1,5 @@
 ---
-layout: dnd
+layout: dndbase
 title: Steelsworn
 content_type: Subclass
 custom_spells: false
