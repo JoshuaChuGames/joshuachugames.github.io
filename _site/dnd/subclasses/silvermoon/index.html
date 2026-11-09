@@ -9,83 +9,44 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <link rel="stylesheet" href="/dnd/dndstyles.css">
-    
-    
-    
-    <script src="/js/advanced-content-loader.js"></script>
-    
 
 </head>
 
 <body>
-    <header>
-        <div class="header-container" data-pageType="dnd" data-layout="dnd" data-custom_js="/js/advanced-content-loader.js">
-            <nav>
-                <div style="display: flex; gap: 12px; align-items: center">
-                    <span class="pill">🎮 Joshua Chu</span>
-                    <span class="muted" style="font-size: 13px" data-short="Game Dev • Software Engineer • D&D Homebrew">Game Developer • Software Engineer • D&D Homebrew Creator</span>
-                </div>
-                <div class="links">
-                    <a href="/index.html">Home</a>
-                    <a href="/index.html#games" data-short="Games">Video Games</a>
-                    <a href="/index.html#software">Software</a>
-                    <a href="/dnd/">D&D</a>
-                    <a href="/index.html#about">About</a>
-                    <a href="/index.html#contact">Contact</a>
-                </div>
-            </nav>
-        </div>
-        <div class="header-container mobile" data-pageType="dnd" data-layout="dnd" data-custom_js="/js/advanced-content-loader.js">
-
-            <nav>
-                <div class="pill mobile">🎮 Joshua Chu</div>
-                <div class="links">
-                    <a href="/index.html">Home</a>
-                    <a href="/index.html#games" data-short="Games">Video Games</a>
-                    <a href="/index.html#software">Software</a>
-                    <a href="/dnd/">D&D</a>
-                    <a href="/index.html#about">About</a>
-                    <a href="/index.html#contact">Contact</a>
-                </div>
-            </nav>
-        </div>
+    <header data-pageType="" data-layout="dnd" data-custom_js="">
+        <nav>
+            <div class="navbar-brand">
+                <span class="navbar-item">Joshua Chu</span>
+            </div>
+            <div class="navbar-links">
+                <a class="navbar-link" href="/">Home</a>
+                <a class="navbar-link" href="/games" data-short="Games">Video Games</a>
+                <a class="navbar-link" href="/software">Software</a>
+                <a class="navbar-link" href="/dnd/">D&D</a>
+                <a class="navbar-link" href="/#about">About</a>
+                <a class="navbar-link" href="/#about">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <header class="mobile" data-pageType="" data-layout="dnd" data-custom_js="">
+        <nav>
+            <div class="navbar-brand">
+                <span class="navbar-item">Joshua Chu</span>
+            </div>
+            <div class="links">
+                <a class="navbar-link" href="/">Home</a>
+                <a class="navbar-link" href="/games" data-short="Games">Video Games</a>
+                <a class="navbar-link" href="/software">Software</a>
+                <a class="navbar-link" href="/dnd/">D&D</a>
+                <a class="navbar-link" href="/#about">About</a>
+                <a class="navbar-link" href="/#about">Contact</a>
+            </div>
+        </nav>
     </header>
 
-    <div id="content-container" class="content-loading">
-        <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Auto-load content from data attributes
-        loadAllContent();
-        const html = document.querySelector('html');
-        console.log('Loading content: ' + html.innerHTML);
-        html.innerHTML = convertToDivs(extractContentFromHtml(html.innerHTML));
-        console.log('Loading content: ' + html.innerHTML);
-        document.querySelectorAll('.fa-star').forEach(icon => {
-            icon.title = 'Playtested Material';
-        }); 
-        document.querySelector('#content-container').classList.remove('content-loading');
-    });
-</script>
-
-    <section class="intro-content">
-        <div class="section-content">
-            <div class="breadcrumb">
-                <a href="/dnd/">D&D Homebrew</a> &gt; 
-                <a href="/dnd/#subclasses">Subclasses</a> &gt; 
-                <span>Silver Moon</span>
-            </div>
-            
-            <div id="content-header" class="content-header">
-                
-                <h1>Silver Moon</h1>
-                
-                <p class="content-type">Witch Subclass</p>
-            </div>
-            
-            <div id="markdown-content">
-                <p><strong><em>The Coven of the Silver Moon are famous for their lycanthropy, causing them to transform into a great beast at will or at the Moon’s mercy. With experimentation and exposure to silver, they are able to control their curse and use it for their own purposes. Many Silver Moon Witches become bounty hunters, utilizing their grotesque form to terrify and crush their enemies.</em></strong></p>
+    <div id="content-container" class="content-container">
+        <p><strong><em>The Coven of the Silver Moon are famous for their lycanthropy, causing them to transform into a great beast at will or at the Moon’s mercy. With experimentation and exposure to silver, they are able to control their curse and use it for their own purposes. Many Silver Moon Witches become bounty hunters, utilizing their grotesque form to terrify and crush their enemies.</em></strong></p>
 
 <table>
   <thead>
@@ -127,19 +88,19 @@
 
 <p>While transformed, you gain the following benefits:</p>
 <ul>
-  <li><strong>Monstrous Might.</strong> Your Strength and Dexterity scores are swapped. This does not affect items or other effects that affect your ability score. You also gain advantage on Strength checks and saving throws.</li>
-  <li><strong>Feral Resilience.</strong> You gain 1d10 + your Witch level temporary hit points and resistance to non-silvered, non-magical bludgeoning, piercing, and slashing damage.</li>
-  <li><strong>Apex Predator.</strong> You gain two monstrous limbs that can be used for unarmed strikes. When you make an unarmed strike, you may make another unarmed strike as a bonus action on your turn. The die for your unarmed strikes becomes 1d6, increasing to 1d8 at 7th level and 1d10 at 11th level.</li>
+  <li><strong>Monstrous Might.</strong> You gain advantage on Strength checks and saving throws. Also, your Strength and Dexterity scores are swapped to the other. This does not affect items or other effects that affect your ability score (i.e. a Belt of Giant Strength would not move the increase to your Dexterity Score).</li>
+  <li><strong>Feral Resilience.</strong> You also gain resistance to non-silvered bludgeoning, piercing, and slashing damage.</li>
+  <li><strong>Apex Predator.</strong> You gain two monstrous limbs that can be used for unarmed strikes. When you make an unarmed stike, you may make another unarmed strike as a bonus action on your turn. The die for your unarmed strikes becomes 1d6, increasing to 1d8 at 7th level and 1d10 at 11th level.</li>
   <li><strong>Hunter’s Grace.</strong> Your movement speed increases by 10 ft.</li>
-  <li><strong>Beast’s Mind.</strong> You have disadvantage on Concentration checks.</li>
-  <li><strong>Grotesque Form.</strong> You do not add your proficiency bonus to weapons not specifically made for your form.</li>
-  <li><strong>Silver Weakness.</strong> Damage from a silvered weapon suppresses Hunter’s Grace and Monstrous Might until the end of your next turn.</li>
+  <li><strong>Beast’s Mind.</strong> Your focus is hindered as you have to maintain control in your new form. You have disadvantage on Concentration checks.</li>
+  <li><strong>Grotesque Form.</strong> Your new form is unable to wield weapons effectively. You do not add your proficiency bonus to weapons not specifically made for your form.</li>
+  <li><strong>Silver Weakness.</strong> If you take damage from a silvered weapon, you lose the movement speed from Hunter’s Grace and the advantages from Monstrous Might until the end of your next turn.</li>
 </ul>
 
 <p>Once used, this feature cannot be used again until you finish a short or long rest.</p>
 
 <h3 id="forged-in-silver">Forged in Silver</h3>
-<p>Also at 3rd level, you gain proficiency with light armor, simple weapons, and martial weapons. Also, you adopt a particular style of fighting as your specialty. Choose one of the following options. You can’t take a Fighting Style option more than once, even if you later get to choose again.</p>
+<p>At 3rd level, your training included martial training to give you the discipline to maintain control. You gain proficiency in light armor and 3 weapons of your choice. Also, you adopt a particular style of fighting as your specialty. Choose one of the following options. You can’t take a Fighting Style option more than once, even if you later get to choose again.</p>
 <ul>
   <li><strong>Archery.</strong> You gain a +2 bonus to attack rolls you make with ranged weapons.</li>
   <li><strong>Dueling.</strong> When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.</li>
@@ -147,101 +108,14 @@
 </ul>
 
 <h3 id="extra-attack">Extra Attack</h3>
-<p>At 6th level, you can attack twice when you take the Attack action. Once per turn when you succeed on a weapon attack, you may expend a Magick to apply its effects to the target.</p>
+<p>Starting at 6th level, you can attack twice, instead of once, whenever you take the Attack action on your turn. Also, once per turn when you succeed on a weapon attack, you may expend a Magick to apply its effects to the target.</p>
 
 <h3 id="regenerate">Regenerate</h3>
-<p>At 10th level, while transformed and above 0 hit points, you gain 1d4 + your proficiency bonus temporary hit points at the start of your turn.</p>
+<p>At 10th level, your lycanthropy heals you to keep you alive. While you are transformed and have more than 0 hit points, you regain 1d4 + your proficiency bonus hit points at the start of your turn. If you take damage from a silvered weapon, this feature has no effect until the end of your next turn.</p>
 
 <h3 id="perfect-form">Perfect Form</h3>
-<p>At 14th level, you can transform and revert at will, though you gain Feral Resilience’s temporary hit points only once per short or long rest. You also have advantage on all unarmed strikes while transformed.</p>
+<p>At 14th level, your curse becomes your greatest tool. You can transform and revert back at will. Also, you gain advantage on all unarmed strikes while you are transformed.</p>
 
-            </div>
-            
-        </div>
-    </section>
+    </div>
 </body>
 </html>
-
-
-
-
-    </div>
-
-
-    <div id="acknowledgements" class="acknowledgements section">
-        <div class="section-content">
-            
-            
-
-            <h1>Playtested By:</h1>
-            <!-- Print the acknowledgement list -->
-            <!-- ACKNOWLEDGEMENT LIST INDEXES: -->
-            <!-- 0: display_style - realname_only, username_only, realname_username, username_realname, none -->
-            <!-- 1: playtester_name -->
-            <!-- 2: username -->
-            <!-- 3: character_name -->
-            <!-- 4: character_level -->
-            <!-- 5: notes -->
-            <!-- ACKNOWLEDGEMENT LIST INDEXES: -->
-            
-                <div id="no-playtesters">No playtesters found</div>
-            
-        </div>
-    </div>
-
-    <!-- Back to Top Button -->
-    <div id="back-to-top" class="back-to-top" style="display: none;">
-        <a href="#content-header">Back to Top</a>
-    </div>
-
-
-</body>
-</html>
-
-
-<script>    
-
-    console.log(document.querySelector('.header-container').dataset.pageType);
-    console.log(document.querySelector('.header-container').dataset.layout);
-
-    if (!document.querySelector('.header-container').dataset.custom_js) {
-        console.log('Removing content-loading class due to custom_js not being set');
-        document.querySelector('#content-container').classList.remove('content-loading');
-    }
-
-    if (document.querySelector('#no-playtesters')) {
-        document.querySelector('#acknowledgements').style.display = 'none';
-    }
-
-    // Back to Top Button Logic
-    function toggleBackToTop() {
-        const backToTopButton = document.getElementById('back-to-top');
-        const windowHeight = window.innerHeight;
-        const documentHeight = document.documentElement.scrollHeight;
-        
-        // Show button if page height is more than 2 screens worth
-        if (documentHeight > windowHeight * 1.25) {
-            backToTopButton.style.display = 'block';
-        } else {
-            backToTopButton.style.display = 'none';
-        }
-    }
-
-    // Check on page load and resize
-    document.addEventListener('DOMContentLoaded', toggleBackToTop);
-    window.addEventListener('resize', toggleBackToTop);
-
-    // Toggle notes dropdown
-    function toggleNotes(arrowElement) {
-        const dropdown = arrowElement.parentElement.querySelector('.notes-dropdown');
-        const isVisible = dropdown.style.display !== 'none';
-        
-        if (isVisible) {
-            dropdown.style.display = 'none';
-            arrowElement.textContent = '▶';
-        } else {
-            dropdown.style.display = 'block';
-            arrowElement.textContent = '▼';
-        }
-    }
-</script>
