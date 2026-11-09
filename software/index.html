@@ -22,11 +22,11 @@ layout: base
             <div class="project-column">
                 <div class="project-card">
                     <a href="{{ software.url }}">
-                        <div class="project-image" >
+                        <div class="project-card-image" >
                                 <img src="{{ software.image | relative_url }}" alt="{{ software.title }}" />
 
                         </div>
-                        <div class="project-content">
+                        <div class="project-card-content">
                             <h1>{{ software.title }}</h1>
                             <p class="project-date">{{ software.start_date }}{% if software.end_date and software.end_date != "" %} - {{ software.end_date }} {% endif %}</p>
                             <div class="project-tags">

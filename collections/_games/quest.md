@@ -5,6 +5,7 @@ description: A 2D roguelike deckbuilder inspired by the likes of Slay the Spire,
 short_description: A roguelike deckbuilder game where you fight monsters to grow more powerful, collecting new cards, items, and feats!
 projectlink: https://spiritboundstudios.itch.io/into-the-depths
 image: /assets/intothedepths.png
+media: []
 tags: [Roguelike, Unity, 3D]
 start_date: April 2026
 end_date: June 2026
@@ -13,30 +14,30 @@ featured: true
 
 <div class="project-feature">
 
-<div markdown="1">
+<div markdown="1" class="project-feature-content">
 
 ## Persistent Deck System
 
 A primary focus of the game was to reduce player frustration, which I designed through a set of persistent cards. These cards would always be available to the player as a means of consistent damage or defense, though they are less effective than drawn cards. This means that the player will never encounter a situation in which they can not defend from a large attack because they only drew attack cards.
 
 </div>
-<img class="project-image" src="/assets/intothedepths/persistentdeck.png" alt="Persistent Deck System" />
+<img class="project-feature-image" src="/assets/intothedepths/persistentdeck.png" alt="Persistent Deck System" />
 </div>
 
 <div class="project-feature">
-<div markdown="1">
+<div markdown="1" class="project-feature-content">
 
 ## Procedural Dungeon Generation
 The levels are randomly generated, though with a system in place to ensure that the player will not encounter the same enemies or event twice in a row. It also ensures that helpful spaces like the rest are or elite fights are more likely to be encountered if they have not appeared recently.
 </div>
-<img class="project-image" src="/assets/intothedepths/procedural.png" alt="Procedural Dungeon Generation" />
+<img class="project-feature-image" src="/assets/intothedepths/procedural.png" alt="Procedural Dungeon Generation" />
 </div>
 
 <div class="project-feature">
-<div markdown="1">
+<div markdown="1" class="project-feature-content">
 
 ## Enemy Design
 Each enemy was designed to provide a unique challenge to the player, with a variety of different moves and conditions they apply to the player. With help from artist Yuuki Matsuda, we were able to create a large cast of fantasy creatures for the player to encounter.
 </div>
-<img class="project-image" src="/assets/intothedepths/enemydesign.png" alt="Enemy Design" />
+<img class="project-feature-image" src="/assets/intothedepths/enemydesign.png" alt="Enemy Design" />
 </div>

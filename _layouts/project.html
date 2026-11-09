@@ -7,22 +7,40 @@ layout: base
             <source src="/assets/hero_2.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <div class="hero-content text-centered line-height-small small all-caps">
-            <div class="bottom-line">
-                <h1>Video Games</h1>
-                <h3 class="wide-letter-spacing thin-letters">Explore my game projects!</h3>
+        <div class="hero-content text-centered line-height-small small">
+            <div class="bottom-line all-caps">
+                <h1>{{ page.title }}</h1>
+                <h3 class="wide-letter-spacing thin-letters">{{ page.subtitle }}</h3>
+            </div>
+            <p class="project-date">{{ page.start_date }}{% if page.end_date and page.end_date != "" %} - {{ page.end_date }} {% endif %}</p>
+            <div class="project-tags">
+            {% for tag in page.tags %}
+                <div class="project-tag">{{ tag }}</div>
+            {% endfor %}
+            </div>
+            <div class="project-links">
+                {% assign links = page.projectlinks %}
+                {% for link in links %}
+                    <a href="{{ link.url }}" class="project-link fa-2x {{ link.icon }}"></a>
+                {% endfor %}
             </div>
         </div>
     </div>
 </section>
 
 <section class="content-section project-content">
-    <div class="project-media-container">
-        {% assign media = page.media %}
+    {% assign media = page.media %}
+    <!-- <div class="project-media-container">
         {% for item in media %}
             {% if item.type == "image" %}
                 <img class="project-media" src="{{ item.src | relative_url }}" alt="{{ item.alt | default: page.title }}" />
-            {% elsif item.type == "video" %}
+            {% endif %}
+        {% endfor %}
+    </div> -->
+    <h1 class="text-centered all-caps bottom-line dark">Dev Logs</h1>   
+    <div class="project-media-container">
+        {% for item in media %}
+            {% if item.type == "video" %}
                 <video class="project-media" controls playsinline>
                     <source src="{{ item.src | relative_url }}" type="video/mp4">
                     Your browser does not support the video tag.
@@ -30,5 +48,6 @@ layout: base
             {% endif %}
         {% endfor %}
     </div>
+    <h1 class="text-centered all-caps bottom-line dark">My Contributions</h1>   
     {{ content }}
 </section> 
