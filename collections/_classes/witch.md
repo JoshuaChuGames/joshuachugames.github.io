@@ -1,5 +1,5 @@
 ---
-layout: dnd
+layout: dndbase
 class: Witch
 title: The Witch
 content_type: Class

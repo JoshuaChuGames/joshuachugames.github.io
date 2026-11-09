@@ -1,5 +1,5 @@
 ---
-layout: dnd
+layout: dndbase
 content_type: Tool
 title: Shop Loot Generator
 ---
