@@ -22,7 +22,7 @@ Starting at 3rd level, you always have certain spells prepared after you reach p
 |----------------|--------|
 | 3rd            | [Compelled Duel](https://dnd5e.wikidot.com/spell:compelled-duel), [Weapon of Usefulness](/dnd/spells/weaponofusefulness) |
 | 5th            | [Branding Smite](https://dnd5e.wikidot.com/spell:branding-smite), [Conjure Oil](/dnd/spells/conjureoil) |
-| 9th            | [Steel Echo](/dnd/spells/steelecho), [Thunder Step](https://dnd5e.wikidot.com/spell:thunder-step) |
+| 9th            | [Steel Echo](/dnd/spells/stelecho), [Thunder Step](https://dnd5e.wikidot.com/spell:thunder-step) |
 | 13th           | [Fire Shield](https://dnd5e.wikidot.com/spell:fire-shield), [Flying Weapon](/dnd/spells/flyingweapon) |
 | 17th           | [Immovable Weapon](/dnd/spells/immovableweapon), [Steel Wind Strike](https://dnd5e.wikidot.com/spell:steel-wind-strike) |
 

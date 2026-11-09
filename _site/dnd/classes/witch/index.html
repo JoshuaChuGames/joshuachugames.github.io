@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Witch - Joshua Chu</title>
+    <meta name="description" content="Far from the bustle of civilization or hidden in the alcoves of the city, those who study the old magic call themselves Witches. Rather than learn through academic scholarship, Witches experiment with the means around them, commune with spirits to learn their ways, and force the world to bend to their will through the ancient way of Magick." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="/dnd/dndstyles.css">
+    
+    
+    
+    <script src="/js/advanced-content-loader.js"></script>
+    
+
+</head>
+
+<body>
+    <header>
+        <div class="header-container" data-pageType="dnd" data-layout="dnd" data-custom_js="/js/advanced-content-loader.js">
+            <nav>
+                <div style="display: flex; gap: 12px; align-items: center">
+                    <span class="pill">🎮 Joshua Chu</span>
+                    <span class="muted" style="font-size: 13px" data-short="Game Dev • Software Engineer • D&D Homebrew">Game Developer • Software Engineer • D&D Homebrew Creator</span>
+                </div>
+                <div class="links">
+                    <a href="/index.html">Home</a>
+                    <a href="/index.html#games" data-short="Games">Video Games</a>
+                    <a href="/index.html#software">Software</a>
+                    <a href="/dnd/">D&D</a>
+                    <a href="/index.html#about">About</a>
+                    <a href="/index.html#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+        <div class="header-container mobile" data-pageType="dnd" data-layout="dnd" data-custom_js="/js/advanced-content-loader.js">
+
+            <nav>
+                <div class="pill mobile">🎮 Joshua Chu</div>
+                <div class="links">
+                    <a href="/index.html">Home</a>
+                    <a href="/index.html#games" data-short="Games">Video Games</a>
+                    <a href="/index.html#software">Software</a>
+                    <a href="/dnd/">D&D</a>
+                    <a href="/index.html#about">About</a>
+                    <a href="/index.html#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div id="content-container" class="content-loading">
+        <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Auto-load content from data attributes
+        loadAllContent();
+        const html = document.querySelector('html');
+        console.log('Loading content: ' + html.innerHTML);
+        html.innerHTML = convertToDivs(extractContentFromHtml(html.innerHTML));
+        console.log('Loading content: ' + html.innerHTML);
+        document.querySelectorAll('.fa-star').forEach(icon => {
+            icon.title = 'Playtested Material';
+        }); 
+        document.querySelector('#content-container').classList.remove('content-loading');
+    });
+</script>
+
+    <section class="intro-content">
+        <div class="section-content">
+            <div class="breadcrumb">
+                <a href="/dnd/">D&D Homebrew</a> &gt; 
+                <a href="/dnd/#classes">Classes</a> &gt; 
+                <span>The Witch</span>
+            </div>
+            
+            <div id="content-header" class="content-header">
+                
+                <h1>The Witch <i class="fa-solid fa-star"></i></h1>
+                
+                <p class="content-type">Witch Class</p>
+            </div>
+            
+            <div id="markdown-content">
+                <p><strong><em>Far from the bustle of civilization or hidden in the alcoves of the city, those who study the old magic call themselves Witches. Rather than learn through academic scholarship, Witches experiment with the means around them, commune with spirits to learn their ways, and force the world to bend to their will through the ancient way of Magick. Wielding hexes, curses, and their signature magick, these mages often find themselves persecuted by society or forced to hide their gifts to stay within it.</em></strong></p>
+
+<p><em>You must have an Intelligence score of 13 or higher in order to multiclass in or out of this class.</em></p>
+
+<div class="class-table">
+
+<table>
+<tr><th colspan="2">The Witch</th></tr>
+<tr><th>Level</th><th>Proficiency Bonus</th><th>Features</th><th>Cantrips Known</th><th>Spells Known</th><th>1st</th><th>2nd</th><th>3rd</th><th>4th</th><th>5th</th><th>6th</th><th>7th</th><th>8th</th><th>9th</th></tr>
+<tr><td>1st</td><td>+2</td><td>Spellcasting, Magick</td><td>3</td><td>4</td><td>2</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>2nd</td><td>+2</td><td>Magick Refresh</td><td>3</td><td>5</td><td>3</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>3rd</td><td>+2</td><td>Witch's Coven</td><td>3</td><td>6</td><td>4</td><td>2</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>4th</td><td>+2</td><td>Ability Score Improvement, <i>Cantrip Versatility (Optional)</i></td><td>4</td><td>7</td><td>4</td><td>3</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>5th</td><td>+3</td><td>-</td><td>4</td><td>8</td><td>4</td><td>3</td><td>2</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>6th</td><td>+3</td><td>Witch's Coven feature</td><td>4</td><td>9</td><td>4</td><td>3</td><td>3</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>7th</td><td>+3</td><td>Efficient Experiments</td><td>4</td><td>10</td><td>4</td><td>3</td><td>3</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>8th</td><td>+3</td><td>Ability Score Improvement</td><td>4</td><td>11</td><td>4</td><td>3</td><td>3</td><td>2</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>9th</td><td>+4</td><td>-</td><td>4</td><td>12</td><td>4</td><td>3</td><td>3</td><td>3</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>10th</td><td>+4</td><td>Witch's Coven feature</td><td>5</td><td>13</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>11th</td><td>+4</td><td>-</td><td>5</td><td>14</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>12th</td><td>+4</td><td>Ability Score Improvement, <i>Cantrip Versatility (Optional)</i></td><td>5</td><td>15</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>13th</td><td>+5</td><td>Damnation</td><td>5</td><td>16</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1</td><td>1</td><td>-</td><td>-</td></tr>
+<tr><td>14th</td><td>+5</td><td>Witch's Coven feature</td><td>5</td><td>17</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1</td><td>1</td><td>-</td><td>-</td></tr>
+<tr><td>15th</td><td>+5</td><td>-</td><td>5</td><td>18</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1</td><td>1</td><td>1</td><td>-</td></tr>
+<tr><td>16th</td><td>+5</td><td>Ability Score Improvement, <i>Cantrip Versatility (Optional)</i></td><td>5</td><td>18</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1</td><td>1</td><td>1</td><td>-</td></tr>
+<tr><td>17th</td><td>+6</td><td>-</td><td>5</td><td>19</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>18th</td><td>+6</td><td>-</td><td>5</td><td>19</td><td>4</td><td>3</td><td>3</td><td>3</td><td>3</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>19th</td><td>+6</td><td>Ability Score Improvement, <i>Cantrip Versatility (Optional)</i></td><td>5</td><td>20</td><td>4</td><td>3</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>20th</td><td>+6</td><td>Witching Hour</td><td>5</td><td>20</td><td>4</td><td>3</td><td>3</td><td>3</td><td>3</td><td>2</td><td>2</td><td>1</td><td>1</td></tr>
+</table>
+
+</div>
+
+<h2 id="class-features">Class Features</h2>
+
+<p>As a Witch, you gain the following class features.</p>
+
+<h3 id="hit-points">Hit Points</h3>
+
+<p><strong>Hit Dice:</strong> 1d6 per Witch level</p>
+
+<p><strong>Hit Points at 1st Level:</strong> 6 + your Constitution modifier</p>
+
+<p><strong>Hit Points at Higher Levels:</strong> 1d6 (or 4) + your Constitution modifier per Witch level after 1st</p>
+
+<h3 id="proficiencies">Proficiencies</h3>
+
+<p><strong>Armor:</strong> None</p>
+
+<p><strong>Weapons:</strong> Simple weapons</p>
+
+<p><strong>Tools:</strong> One type of artisan’s tool of your choice</p>
+
+<p><strong>Saving Throws:</strong> Intelligence, Charisma</p>
+
+<p><strong>Skills:</strong> Choose three from Animal Handling, Arcana, Deception, Insight, Investigation, Medicine, Nature, Perception, Persuasion, Stealth</p>
+
+<h3 id="equipment">Equipment</h3>
+
+<p>You start with the following equipment, in addition to the equipment granted by your background:</p>
+
+<ul>
+  <li>(a) a sickle or (b) a dagger</li>
+  <li>(a) a component pouch or (b) an arcane focus</li>
+  <li>(a) a scholar’s pack or (b) an explorer’s pack</li>
+</ul>
+
+<h3 id="spellcasting">Spellcasting</h3>
+
+<p>You have studied to bend magic to your will, casting spells you have committed to memory.</p>
+
+<h4 id="cantrips">Cantrips</h4>
+
+<p>You know three cantrips of your choice from the Witch spell list. You learn additional Witch cantrips at higher levels, as shown in the Cantrips Known column of the Witch table.</p>
+
+<h4 id="spell-slots">Spell Slots</h4>
+
+<p>The Witch table shows how many spell slots you have to cast your Witch spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell’s level or higher. You regain all expended spell slots when you finish a long rest.</p>
+
+<h4 id="spells-known-of-1st-level-and-higher">Spells Known of 1st Level and Higher</h4>
+
+<p>You know four 1st-level spells of your choice from the Witch spell list. The Spells Known column of the Witch table shows when you learn more Witch spells of your choice. Each spell must be of a level for which you have spell slots.</p>
+<div class="break"></div>
+<p>Additionally, when you gain a level in this class, you can choose one Witch spell you know and replace it with another spell from the Witch spell list of a level for which you have spell slots.</p>
+
+<h4 id="spellcasting-ability">Spellcasting Ability</h4>
+
+<p>Intelligence is your spellcasting ability for your Witch spells. Your magic comes from your experiments and study of the ancient arcane.</p>
+
+<div class="break"></div>
+<p><strong>Spell save DC</strong> = 8 + your proficiency bonus + your Intelligence modifier</p>
+
+<p><strong>Spell attack modifier</strong> = your proficiency bonus + your Intelligence modifier</p>
+
+<h4 id="ritual-casting">Ritual Casting</h4>
+
+<p>You can cast any Witch spell you know as a ritual if that spell has the ritual tag.</p>
+
+<h3 id="magick">Magick</h3>
+
+<p>Your experiments form themselves through Magick, additional effects your spells gain. Most Witches keep notes of their experiments in books or scrolls, though only Witches can make use of another Witch’s Magick Notes.</p>
+
+<p>At 1st level, you learn two Magicks of your choice. When you cast a cantrip or spell, you may expend one of your Magicks and apply its effect. Only one Magick can be used per spell. You regain expended Magicks at the end of a long rest.</p>
+
+<div class="break"></div>
+<p><strong>Learning Magick.</strong> When you gain a level in this class, you gain an additional Magick of your choice to add to your Notes. A level prerequisite refers to your level in this class.</p>
+
+<div class="break"></div>
+<p><strong>Preparing Magick.</strong> You prepare a number of Magicks from your Notes equal to half your Witch level (minimum two). You can change your prepared Magicks when you finish a long rest.</p>
+
+<div class="break"></div>
+<p><strong>Copying Magick Notes.</strong> When you find Magick Notes, you may copy them into your own Notes. The process involves deciphering the unique methods of the author, practicing with the Magick, and making it your own. The process takes 2 hours plus an additional hour for each Magick you have already added through this process. If a Magick has a level requirement you do not meet, you cannot prepare it until you do.</p>
+
+<h3 id="magick-refresh">Magick Refresh</h3>
+
+<p>At 2nd level, as a bonus action, you may expend a spell slot and regain one expended Magick.</p>
+
+<h3 id="witchs-coven">Witch’s Coven</h3>
+
+<p>At 3rd level, you establish yourself as a practitioner of a coven. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th level.</p>
+
+<table>
+<thead>
+<tr>
+<th>Coven</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+
+
+<tr>
+<td>
+
+<a href="/dnd/subclasses/apothecary/">Apothecary</a>
+
+</td>
+<td>Phoenix's Nest of Everything</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td>
+
+<a href="/dnd/subclasses/silvermoon/">Silver Moon</a>
+
+</td>
+<td>Phoenix's Nest of Everything</td>
+</tr>
+
+
+
+
+
+<tr>
+<td>
+
+<a href="/dnd/subclasses/soulcatcher/">Soulcatcher</a>
+
+</td>
+<td>Phoenix's Nest of Everything</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td>
+
+<a href="/dnd/subclasses/tormentor/">Tormentor</a>
+
+</td>
+<td>Phoenix's Nest of Everything</td>
+</tr>
+
+
+
+
+
+
+</tbody>
+</table>
+
+<h3 id="ability-score-improvement">Ability Score Improvement</h3>
+
+<p>When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score by 2, or two ability scores by 1. You cannot increase an ability score above 20 using this feature.</p>
+
+<h3 id="efficient-experiments">Efficient Experiments</h3>
+
+<p>Beginning at 7th level, you halve the casting times of spells that are longer than 1 minute. The time required to write a new Magick into your Notes is also halved.</p>
+
+<h3 id="damnation">Damnation</h3>
+
+<p>At 13th level, when a creature fails a saving throw against your spell save DC, it subtracts 1d8 from the next saving throw it makes until the end of your next turn.</p>
+
+<h3 id="witching-hour">Witching Hour</h3>
+
+<p>At 20th level, as a bonus action, you spill forth mana from every pore and gain the following benefits for 1 minute:</p>
+
+<ul>
+  <li>Once per turn when you use a Magick, immediately regain an expended Magick.</li>
+  <li>When a creature is affected by Damnation, decrease all saving throws it makes by 1d8 until the end of your next turn.</li>
+  <li>You may use up to three Magicks when you cast a cantrip or spell.</li>
+</ul>
+
+<p>Once you use this feature, you cannot use it again until you finish a long rest.</p>
+
+<h3 id="magicks">Magicks</h3>
+
+<h4 id="curse-of-hellfire">Curse of Hellfire</h4>
+<p>One target of the spell is wreathed in hellish fire. For 1 minute, it takes 1d6 + your Intelligence modifier fire damage at the start of its turn. The target may make a Constitution saving throw at the end of its turn to quell the flames. The flames also extinguish if the target is fully submerged in water or takes cold damage. The damage increases by 1d6 at 5th level (2d6), 11th level (3d6), and 17th level (4d6).</p>
+
+<h4 id="season-of-change">Season of Change</h4>
+<p>Immediately after casting the spell or cantrip, you may exchange it for a different spell or cantrip in the Witch spell list. The new spell must be the same level as the old one. The effects of this Magick are reverted upon taking a long rest.</p>
+
+<h4 id="silver-steel">Silver Steel</h4>
+<p>One target of the spell is blessed with sharp silver for 1 minute. The creature’s weapon attacks count as silvered and have a +1 bonus to hit and damage rolls, provided it does not already have an equal or greater bonus.</p>
+
+<h4 id="resourcefulness">Resourcefulness</h4>
+<p>If the spell has a material component and you consume the exact materials needed without an Arcane Focus or Component Pouch, the spell is cast at one level higher.</p>
+
+<h4 id="curse-of-self-doubt">Curse of Self-Doubt</h4>
+<p>One target must make an Intelligence saving throw at the start of each turn for 1 minute. On a failure, it may take only an action or bonus action that turn. On a success, the effect ends.</p>
+
+<h4 id="curse-of-decay">Curse of Decay</h4>
+<p>One target has disadvantage on weapon damage rolls for 1 minute. It can end this effect by making a Constitution saving throw as an action.</p>
+
+<h4 id="moons-howl">Moon’s Howl</h4>
+<p>For 1 minute, one target has resistance to non-silvered or non-magical bludgeoning, piercing, and slashing damage and deals extra melee damage equal to its proficiency bonus. If it starts its turn below half its hit points, it must attack the closest creature.</p>
+
+<h4 id="curse-of-chaos">Curse of Chaos</h4>
+<p>One target rolls on the Wild Magic table at the start of its next turn. The number of rolls increases by one at 5th level (2), 11th level (3), and 17th level (4); you choose which outcome applies.</p>
+
+<h4 id="curse-of-seduction">Curse of Seduction</h4>
+<p>If the spell is a charm, one target has disadvantage on its saving throw. At 11th level, this Magick also overrides immunity to the Charmed condition for that spell.</p>
+
+<h4 id="dopplers-blood">Doppler’s Blood</h4>
+<p>Immediately after casting the spell, you also cast Disguise Self. At 11th level, this instead casts Seeming.</p>
+
+<h4 id="curse-of-isolation">Curse of Isolation</h4>
+<p>Choose another creature you can see within 30 feet. For 1 minute, one target can see only that creature; all other creatures are invisible to it. The target may make a Wisdom saving throw at the end of its turn to end the effect.</p>
+
+<h4 id="respite">Respite</h4>
+<p>For 1 minute, one target regains 1d4 hit points at the start of its turn. The Magick ends if the target starts its turn above half its maximum hit points or is reduced below 0 hit points. The healing increases by 1d4 at 5th level (2d4), 11th level (3d4), and 17th level (4d4).</p>
+
+<h4 id="falcons-eye">Falcon’s Eye</h4>
+<p>For 1 minute, one target has advantage on Investigation, Insight, and Perception checks and doubles its proficiency bonus for ranged weapon and ranged spell attacks.</p>
+
+<h4 id="glamour">Glamour</h4>
+<p>Wrap yourself in enchanting mana. For 10 minutes, you have advantage on Charisma checks and can cast Disguise Self without expending a spell slot.</p>
+
+<h4 id="curse-of-endings">Curse of Endings</h4>
+<p>One target has disadvantage on death saving throws for 1 minute.</p>
+
+<h4 id="curse-of-perpetuity">Curse of Perpetuity</h4>
+<p>One target cannot regain hit points for 1 minute. It may make a Constitution saving throw at the end of each turn to end the effect.</p>
+
+<h4 id="trade-wounds">Trade Wounds</h4>
+<p>When you cast a spell that restores hit points to a creature, you may take necrotic damage equal to the healing to increase the healing by your Intelligence modifier.</p>
+
+<h4 id="trial-of-grasses">Trial of Grasses</h4>
+<p>You gain resistance to poison damage and advantage on saving throws against poison and disease for 1 hour.</p>
+
+<h4 id="safety">Safety</h4>
+<p>One target gains temporary hit points equal to your Intelligence modifier and may add your Intelligence modifier to its next saving throw.</p>
+
+<h4 id="curse-of-domination">Curse of Domination</h4>
+<p><em>Prerequisite: 13th level.</em> Immediately after casting the spell, you also cast Dominate Person on one target.</p>
+
+            </div>
+            
+        </div>
+    </section>
+</body>
+</html>
+
+
+
+
+    </div>
+
+
+    <div id="acknowledgements" class="acknowledgements section">
+        <div class="section-content">
+            
+            
+
+            <h1>Playtested By:</h1>
+            <!-- Print the acknowledgement list -->
+            <!-- ACKNOWLEDGEMENT LIST INDEXES: -->
+            <!-- 0: display_style - realname_only, username_only, realname_username, username_realname, none -->
+            <!-- 1: playtester_name -->
+            <!-- 2: username -->
+            <!-- 3: character_name -->
+            <!-- 4: character_level -->
+            <!-- 5: notes -->
+            <!-- ACKNOWLEDGEMENT LIST INDEXES: -->
+            
+                <div id="no-playtesters">No playtesters found</div>
+            
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div id="back-to-top" class="back-to-top" style="display: none;">
+        <a href="#content-header">Back to Top</a>
+    </div>
+
+
+</body>
+</html>
+
+
+<script>    
+
+    console.log(document.querySelector('.header-container').dataset.pageType);
+    console.log(document.querySelector('.header-container').dataset.layout);
+
+    if (!document.querySelector('.header-container').dataset.custom_js) {
+        console.log('Removing content-loading class due to custom_js not being set');
+        document.querySelector('#content-container').classList.remove('content-loading');
+    }
+
+    if (document.querySelector('#no-playtesters')) {
+        document.querySelector('#acknowledgements').style.display = 'none';
+    }
+
+    // Back to Top Button Logic
+    function toggleBackToTop() {
+        const backToTopButton = document.getElementById('back-to-top');
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+        
+        // Show button if page height is more than 2 screens worth
+        if (documentHeight > windowHeight * 1.25) {
+            backToTopButton.style.display = 'block';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
+    }
+
+    // Check on page load and resize
+    document.addEventListener('DOMContentLoaded', toggleBackToTop);
+    window.addEventListener('resize', toggleBackToTop);
+
+    // Toggle notes dropdown
+    function toggleNotes(arrowElement) {
+        const dropdown = arrowElement.parentElement.querySelector('.notes-dropdown');
+        const isVisible = dropdown.style.display !== 'none';
+        
+        if (isVisible) {
+            dropdown.style.display = 'none';
+            arrowElement.textContent = '▶';
+        } else {
+            dropdown.style.display = 'block';
+            arrowElement.textContent = '▼';
+        }
+    }
+</script>

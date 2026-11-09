@@ -441,6 +441,55 @@ li.acknowledgement.notes{
     position: relative;
 }
 
+.section-content .title {
+    color: var(--fg);
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 24px;
+}
+
+.section-content .header {
+    color: var(--fg);
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+.section-content .subheader {
+    color: var(--fg);
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+.section-content .subsubheader {
+    color: var(--fg);
+    font-size: 18px;
+    font-weight: 550;
+    margin-top: 12px;
+    margin-bottom: 8px;
+}
+
+.section-content .bold {
+    font-weight: 600;
+    color: var(--fg);
+}
+
+.section-content .italic {
+    font-style: italic;
+}
+
+.section-content .link {
+    color: var(--brand);
+    text-decoration: none;
+}
+
+.section-content .link:hover {
+    text-decoration: underline;
+}
+
 @media (max-width: 900px) {
     .section-icon {
         display: none;
@@ -577,7 +626,7 @@ li.acknowledgement.notes{
 /* Break Elements */
 .break {
     display: block;
-    height: 1em;
+    height: 1.5em;
     width: 100%;
     clear: both;
 }
@@ -817,6 +866,18 @@ tr:hover {
 
 tr:last-child td {
     border-bottom: none;
+}
+
+.class-table table {
+    font-size: 14px;
+}
+
+.class-table th,td {
+    padding: 8px 12px;
+}
+
+.class-table th {
+    font-size: 12px;
 }
 
 @media (max-width: 900px) {

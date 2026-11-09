@@ -577,7 +577,7 @@ li.acknowledgement.notes{
 /* Break Elements */
 .break {
     display: block;
-    height: 1em;
+    height: 1.5em;
     width: 100%;
     clear: both;
 }
@@ -817,6 +817,18 @@ tr:hover {
 
 tr:last-child td {
     border-bottom: none;
+}
+
+.class-table table {
+    font-size: 14px;
+}
+
+.class-table th,td {
+    padding: 8px 12px;
+}
+
+.class-table th {
+    font-size: 12px;
 }
 
 @media (max-width: 900px) {

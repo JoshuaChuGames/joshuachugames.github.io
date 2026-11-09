@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Soulcatcher - Joshua Chu</title>
+    <meta name="description" content="Soulcatchers communicate with spirits of the dead and negotiate with them to wield their power. They serve as mediums, granting final wishes or allowing loved ones a final conversation, though some are feared for reaping souls from the living." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="/dnd/dndstyles.css">
+    
+    
+    
+    <script src="/js/advanced-content-loader.js"></script>
+    
+
+</head>
+
+<body>
+    <header>
+        <div class="header-container" data-pageType="dnd" data-layout="dnd" data-custom_js="/js/advanced-content-loader.js">
+            <nav>
+                <div style="display: flex; gap: 12px; align-items: center">
+                    <span class="pill">🎮 Joshua Chu</span>
+                    <span class="muted" style="font-size: 13px" data-short="Game Dev • Software Engineer • D&D Homebrew">Game Developer • Software Engineer • D&D Homebrew Creator</span>
+                </div>
+                <div class="links">
+                    <a href="/index.html">Home</a>
+                    <a href="/index.html#games" data-short="Games">Video Games</a>
+                    <a href="/index.html#software">Software</a>
+                    <a href="/dnd/">D&D</a>
+                    <a href="/index.html#about">About</a>
+                    <a href="/index.html#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+        <div class="header-container mobile" data-pageType="dnd" data-layout="dnd" data-custom_js="/js/advanced-content-loader.js">
+
+            <nav>
+                <div class="pill mobile">🎮 Joshua Chu</div>
+                <div class="links">
+                    <a href="/index.html">Home</a>
+                    <a href="/index.html#games" data-short="Games">Video Games</a>
+                    <a href="/index.html#software">Software</a>
+                    <a href="/dnd/">D&D</a>
+                    <a href="/index.html#about">About</a>
+                    <a href="/index.html#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div id="content-container" class="content-loading">
+        <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Auto-load content from data attributes
+        loadAllContent();
+        const html = document.querySelector('html');
+        console.log('Loading content: ' + html.innerHTML);
+        html.innerHTML = convertToDivs(extractContentFromHtml(html.innerHTML));
+        console.log('Loading content: ' + html.innerHTML);
+        document.querySelectorAll('.fa-star').forEach(icon => {
+            icon.title = 'Playtested Material';
+        }); 
+        document.querySelector('#content-container').classList.remove('content-loading');
+    });
+</script>
+
+    <section class="intro-content">
+        <div class="section-content">
+            <div class="breadcrumb">
+                <a href="/dnd/">D&D Homebrew</a> &gt; 
+                <a href="/dnd/#subclasses">Subclasses</a> &gt; 
+                <span>Soulcatcher</span>
+            </div>
+            
+            <div id="content-header" class="content-header">
+                
+                <h1>Soulcatcher</h1>
+                
+                <p class="content-type">Witch Subclass</p>
+            </div>
+            
+            <div id="markdown-content">
+                <p><strong><em>Soulcatchers communicate with spirits of the dead and negotiate with them to wield their power. They serve as mediums, granting final wishes or allowing loved ones a final conversation, though some are feared for reaping souls from the living.</em></strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Witch Level</th>
+      <th>Features</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>3rd</td>
+      <td>Catch Soul, Consume Soul</td>
+    </tr>
+    <tr>
+      <td>6th</td>
+      <td>Spirit Whisperer, Stored Power</td>
+    </tr>
+    <tr>
+      <td>10th</td>
+      <td>Return to Shadow</td>
+    </tr>
+    <tr>
+      <td>14th</td>
+      <td>Enough Negotiations</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="expanded-spell-list">Expanded Spell List</h3>
+<p>The following spells are added to the Witch spell list for you:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Witch Level</th>
+      <th>Spells</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1st</td>
+      <td>Charm Person, Command</td>
+    </tr>
+    <tr>
+      <td>3rd</td>
+      <td>Borrowed Knowledge, Detect Thoughts</td>
+    </tr>
+    <tr>
+      <td>5th</td>
+      <td>Dispel Magic, Sending</td>
+    </tr>
+    <tr>
+      <td>7th</td>
+      <td>Compulsion, Raulothim’s Psychic Lance</td>
+    </tr>
+    <tr>
+      <td>9th</td>
+      <td>Dominate Person, Modify Memory</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="catch-soul">Catch Soul</h3>
+<p>Starting at 3rd level, you have learned to capture souls and bind them to objects. As an action, you may take the soul of a creature within 5 ft. that has been deceased for less than a minute. You must be holding the object you wish to store their soul in and an object cannot hold more than one soul at once, unless the item’s stat block says otherwise.</p>
+
+<p>While holding an object with a soul in it, you are able to speak to the soul and hear its thoughts. A soul can only communicate using languages it knew in life.</p>
+
+<p>Many of your Soulcatcher spells and features consume stored souls. The object the soul is stored in must be on your person to consume it. You may have a number of stored souls equal to your Intelligence modifier (minimum of 1). When you are at your maximum amount of stored souls and you store another one, the oldest stored soul is released.</p>
+
+<h3 id="consume-soul">Consume Soul</h3>
+<p>Also at 3rd level, you may consume a stored soul to gain one of the following benefits for 1 minute:</p>
+
+<ul>
+  <li>Regain 1d10 + your Witch level hit points.</li>
+  <li>Gain advantage on one ability.</li>
+  <li>Add 1d8 to spell damage once per turn.</li>
+  <li>Regain one expended Magick.</li>
+</ul>
+
+<h3 id="spirit-whisperer">Spirit Whisperer</h3>
+<p>At 6th level, you can see spirits and souls within 30 ft., even if they are Invisible. You have advantage on Charisma or spellcasting checks made when interacting with a soul.</p>
+
+<h3 id="stored-power">Stored Power</h3>
+<p>Also at 6th level, when you cast a Soulcatcher spell or use Consume Soul, you may delay its effect inside a stored soul. A creature holding the soul’s object can then use it with your slot level, spell save DC, spell attack bonus, and spellcasting ability. The soul is expended unless the user is also a Soulcatcher. Unused Stored Power becomes a normal stored soul at the end of your next short or long rest.</p>
+
+<h3 id="return-to-shadow">Return to Shadow</h3>
+<p>At 10th level, when you are reduced below 0 hit points, you may expend a stored soul as a reaction to immediately regain 1d10 + your Witch level hit points. Once used, you cannot use this feature again until the end of your next short rest.</p>
+
+<h3 id="enough-negotiations">Enough Negotiations</h3>
+<p>Starting when you reach 14th level, as an action, consume all stored souls you have. For each stored soul consumed, gain a benefit from the Consume Soul feature or choose one of the following options:</p>
+
+<ul>
+  <li><strong>True Motivation.</strong> For 1 minute, your next spell attack is a critical hit.</li>
+  <li><strong>Corrupted Morals.</strong> Choose a creature you can see within 30 ft. and force it to make a Charisma saving throw. On a failure, it has disadvantage on saving throws it makes against your spells for 1 minute. At the end of its turn, it may reroll this saving throw to end the effect.</li>
+  <li><strong>Intellect Fortress.</strong> For 1 minute, you have advantage on all Intelligence, Wisdom, and Charisma saving throws.</li>
+  <li><strong>Lifetimes of Experience.</strong> Gain a class feature that the soul had in life and be able to use it once for 1 minute. If the soul had no class features, you gain a random 1st-level class feature of the DM’s choosing.</li>
+</ul>
+
+            </div>
+            
+        </div>
+    </section>
+</body>
+</html>
+
+
+
+
+    </div>
+
+
+    <div id="acknowledgements" class="acknowledgements section">
+        <div class="section-content">
+            
+            
+
+            <h1>Playtested By:</h1>
+            <!-- Print the acknowledgement list -->
+            <!-- ACKNOWLEDGEMENT LIST INDEXES: -->
+            <!-- 0: display_style - realname_only, username_only, realname_username, username_realname, none -->
+            <!-- 1: playtester_name -->
+            <!-- 2: username -->
+            <!-- 3: character_name -->
+            <!-- 4: character_level -->
+            <!-- 5: notes -->
+            <!-- ACKNOWLEDGEMENT LIST INDEXES: -->
+            
+                <div id="no-playtesters">No playtesters found</div>
+            
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div id="back-to-top" class="back-to-top" style="display: none;">
+        <a href="#content-header">Back to Top</a>
+    </div>
+
+
+</body>
+</html>
+
+
+<script>    
+
+    console.log(document.querySelector('.header-container').dataset.pageType);
+    console.log(document.querySelector('.header-container').dataset.layout);
+
+    if (!document.querySelector('.header-container').dataset.custom_js) {
+        console.log('Removing content-loading class due to custom_js not being set');
+        document.querySelector('#content-container').classList.remove('content-loading');
+    }
+
+    if (document.querySelector('#no-playtesters')) {
+        document.querySelector('#acknowledgements').style.display = 'none';
+    }
+
+    // Back to Top Button Logic
+    function toggleBackToTop() {
+        const backToTopButton = document.getElementById('back-to-top');
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+        
+        // Show button if page height is more than 2 screens worth
+        if (documentHeight > windowHeight * 1.25) {
+            backToTopButton.style.display = 'block';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
+    }
+
+    // Check on page load and resize
+    document.addEventListener('DOMContentLoaded', toggleBackToTop);
+    window.addEventListener('resize', toggleBackToTop);
+
+    // Toggle notes dropdown
+    function toggleNotes(arrowElement) {
+        const dropdown = arrowElement.parentElement.querySelector('.notes-dropdown');
+        const isVisible = dropdown.style.display !== 'none';
+        
+        if (isVisible) {
+            dropdown.style.display = 'none';
+            arrowElement.textContent = '▶';
+        } else {
+            dropdown.style.display = 'block';
+            arrowElement.textContent = '▼';
+        }
+    }
+</script>
