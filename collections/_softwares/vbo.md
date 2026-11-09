@@ -40,10 +40,20 @@ The frontend was built using JavaScript, HTML, and CSS to create an intuitive us
 <img class="project-feature-image" src="/assets/vbo/pixijs.svg" alt="Technical Implementation" style="padding: 12px;" />
 </div>
 
+<div class="project-feature">
+<div markdown="1" class="project-feature-content">
 ## Impact
 
 The WebGL seat map system significantly enhanced the user experience for large venue ticket sales by providing smooth, interactive seat selection even for the most complex venue layouts. The performance improvements enabled the platform to handle high-traffic events without degradation, supporting thousands of concurrent users during peak ticket sales periods. This project was a key component of the platform-wide UI/UX overhaul, contributing to a more modern and user-friendly interface. The real-time customer interaction capabilities transformed how users engage with venue layouts, making the ticket purchasing process more intuitive and efficient.
 
+</div>
+</div>
+
+<div class="project-feature">
+<div markdown="1" class="project-feature-content">
 ## Collaboration & Process
 
 Throughout the internship, I actively participated in daily standup meetings where I reported on progress and gathered feedback for next steps, ensuring alignment with team goals and project requirements. I collaborated closely with both front-end and back-end teams as part of the platform-wide UI/UX overhaul, contributing to cross-functional discussions and technical decision-making processes. The development followed agile methodologies, with regular sprint planning sessions and iterative development cycles that allowed for continuous improvement and adaptation to changing requirements.
+
+</div>
+</div>

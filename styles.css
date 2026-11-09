@@ -503,7 +503,7 @@ p.project-date {
 .project-feature-image {
     width: 35%;
     aspect-ratio: 16/9;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 12px;
     flex-shrink: 0;
     align-self: center;
