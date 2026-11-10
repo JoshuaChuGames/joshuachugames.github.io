@@ -1,43 +1,61 @@
 ---
 layout: project
-title: Into the Depths
-description: A 2D roguelike deckbuilder inspired by the likes of Slay the Spire, developed in the Godot engine. It was created by me as the sole developer with the enemy art created by artist Yuuki Matsuda (@_yam.exe on Instagram). With a focus on replayability, I placed a strong emphasis on enemy variety and many possible builds for the player to create.
-short_description: A roguelike deckbuilder game where you fight monsters to grow more powerful, collecting new cards, items, and feats!
-projectlink: https://spiritboundstudios.itch.io/into-the-depths
-image: /assets/intothedepths.png
+title: Quest!
+description: Quest is a 3D isometric tactics game inspired by tabletop RPGs. Players explore a hex-based overworld, discover randomized encounters, and fight turn-based battles where breaking cover can open new routes across the map.
+short_description: A 3D isometric tactics game where you explore a hex-based overworld, fight turn-based battles, and use cover to control the battlefield.
+projectlink: https://spiritboundstudios.itch.io/quest
+image: /assets/Projects/Quest/bannercardvertical.png
+hero: /assets/Projects/Quest/hero.mp4
 media: []
 tags: [Roguelike, Unity, 3D]
 start_date: April 2026
 end_date: June 2026
+order: 2
 featured: true
 ---
 
 <div class="project-feature">
-
 <div markdown="1" class="project-feature-content">
 
-## Persistent Deck System
+## Hex Grid & Movement
 
-A primary focus of the game was to reduce player frustration, which I designed through a set of persistent cards. These cards would always be available to the player as a means of consistent damage or defense, though they are less effective than drawn cards. This means that the player will never encounter a situation in which they can not defend from a large attack because they only drew attack cards.
+- Built a hex grid in Unity and C# that maps tiles to world positions and uses axial and cube coordinates for neighbor and distance calculations.
+- Developed a custom tool to paint terrain, set tile elevation and cover, and place or erase obstacles.
+- Implemented A* pathfinding with a hex-distance heuristic and a fallback that routes units to a walkable tile beside a blocked destination.
+- Tracked tile occupancy and walkability as entities entered, moved across, or left the grid.
 
 </div>
-<img class="project-feature-image" src="/assets/intothedepths/persistentdeck.png" alt="Persistent Deck System" />
+
+<video autoplay muted loop controls playsinline class="project-feature-image">
+    <source src="/assets/Projects/Quest/hexmapbuilder.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
 </div>
 
 <div class="project-feature">
 <div markdown="1" class="project-feature-content">
 
-## Procedural Dungeon Generation
-The levels are randomly generated, though with a system in place to ensure that the player will not encounter the same enemies or event twice in a row. It also ensures that helpful spaces like the rest are or elite fights are more likely to be encountered if they have not appeared recently.
+## Destructible Cover
+
+- Designed destructible cover so players could open new movement routes by breaking obstacles during combat.  
+- Implemented enemy pathfinding logic that evaluates whether breaking through cover would get an enemy to the player faster than going around it.
 </div>
-<img class="project-feature-image" src="/assets/intothedepths/procedural.png" alt="Procedural Dungeon Generation" />
+<video autoplay muted loop controls playsinline class="project-feature-image">
+    <source src="/assets/Projects/Quest/destruction.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
 </div>
 
 <div class="project-feature">
 <div markdown="1" class="project-feature-content">
 
-## Enemy Design
-Each enemy was designed to provide a unique challenge to the player, with a variety of different moves and conditions they apply to the player. With help from artist Yuuki Matsuda, we were able to create a large cast of fantasy creatures for the player to encounter.
+## Randomized Overworld Encounters
+
+- Implemented randomized encounters as players traverse the hex-based overworld.
+- Separated overworld exploration from combat, using dedicated battle maps for turn-based encounters.
 </div>
-<img class="project-feature-image" src="/assets/intothedepths/enemydesign.png" alt="Enemy Design" />
+<video autoplay muted loop controls playsinline class="project-feature-image">
+    <source src="/assets/Projects/Quest/overworld.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
 </div>

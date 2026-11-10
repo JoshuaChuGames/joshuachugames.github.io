@@ -11,6 +11,7 @@
     --fg: #e9eef3;
     --fg-dark: #3f4244;
     --muted: #bcc6d4;
+    --warning: #ff3c00;
     --brand: #58c4ff;
     --highlight: #1a6ecf;
     --card: #131720;
@@ -118,6 +119,10 @@ body {
 
 .dark {
     color: var(--fg-dark) !important;
+}
+
+.reduced-width {
+    width: 75%;
 }
 
 
@@ -302,8 +307,8 @@ nav {
 
 .profile-image {
     object-fit: cover;
-    width: clamp(150px, 25cqw, 350px);
-    height: clamp(150px, 25cqw, 350px);
+    width: clamp(100px, 25cqw, 250px);
+    height: clamp(100px, 25cqw, 250px);
     aspect-ratio: 1/1;
     border-radius: 50%;
     overflow: hidden;
@@ -312,10 +317,16 @@ nav {
 .about-content {
     min-width: 300px;
     text-wrap: wrap;
-    color: var(--fg-dark);
     width: 70%;
+    color: var(--fg-dark);
     margin: 0 ;
-    font-size: 1.05rem;
+}
+
+.about-content p {
+    font-size: clamp(0.7rem, 2cqw, 1.0rem);
+}
+.about-content h3 {
+    font-size: clamp(0.85rem, 2.25cqw, 1.2rem);
 }
 
 .contact-container {
@@ -347,6 +358,12 @@ nav {
     color: var(--fg);
 }
 
+@media (max-width: 900px) {
+    .about-content {
+        width: 100%;
+    }
+}
+
 /* ==========================================================================
    PROJECTS
    ========================================================================== */
@@ -357,6 +374,8 @@ nav {
     justify-content: center;
     align-items: flex-start;
     padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .projects.featured .project-column {
@@ -486,6 +505,13 @@ p.project-date {
     border-radius: 12px;
 }
 
+.project-warning {
+    border: 1px solid var(--warning);
+    padding: 0.5rem;
+    margin: 1rem 2rem;
+    border-radius: 0.25rem;
+}
+
 .project-feature {
     display: flex;
     flex-direction: row;
@@ -495,13 +521,13 @@ p.project-date {
 }
 
 .project-feature-content {
-    width: 65%;
+    width: 60%;
     padding: 0 2rem;
     color: var(--fg-dark);
 }
 
 .project-feature-image {
-    width: 35%;
+    width: 40%;
     aspect-ratio: 16/9;
     object-fit: contain;
     border-radius: 12px;

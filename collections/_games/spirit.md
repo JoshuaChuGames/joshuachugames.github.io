@@ -1,42 +1,49 @@
 ---
 layout: project
 title: Spirit
-description: A 2D roguelike deckbuilder inspired by the likes of Slay the Spire, developed in the Godot engine. It was created by me as the sole developer with the enemy art created by artist Yuuki Matsuda (@_yam.exe on Instagram). With a focus on replayability, I placed a strong emphasis on enemy variety and many possible builds for the player to create.
-short_description: A roguelike deckbuilder game where you fight monsters to grow more powerful, collecting new cards, items, and feats!
-projectlink: https://spiritboundstudios.itch.io/into-the-depths
-image: /assets/intothedepths.png
+description: Spirit is a turn-based JRPG that follows a knight and a young sorcerer on a journey to cure a strange illness plaguing the lands. Explore a fantastical world of monsters and strange people, slash alongside the knight's sword, and create your own spells to wield!
+short_description: A turn-based JRPG where you fight monsters, explore a fantastical world, and create your own spells!
+warning: This project is currently in development and may change significantly!
+projectlink: 
+image: /assets/Projects/Spirit/bannervertical.png
 media: []
 tags: [2D, Narrative, Godot]
 start_date: October 2025
 end_date: Present
+order: 3
 ---
-
-<div class="project-feature">
-
-<div markdown="1" class="project-feature-content">
-
-## Persistent Deck System
-
-A primary focus of the game was to reduce player frustration, which I designed through a set of persistent cards. These cards would always be available to the player as a means of consistent damage or defense, though they are less effective than drawn cards. This means that the player will never encounter a situation in which they can not defend from a large attack because they only drew attack cards.
-
-</div>
-<img class="project-feature-image" src="/assets/intothedepths/persistentdeck.png" alt="Persistent Deck System" />
-</div>
-
 <div class="project-feature">
 <div markdown="1" class="project-feature-content">
 
-## Procedural Dungeon Generation
-The levels are randomly generated, though with a system in place to ensure that the player will not encounter the same enemies or event twice in a row. It also ensures that helpful spaces like the rest are or elite fights are more likely to be encountered if they have not appeared recently.
+## Cutscene System
+
+- Integrated Godot’s AnimationPlayer with Dialogic so animation and dialogue can pause and resume each other through signals.
+- Built editor markers that set actors’ positions and facing directions. Cutscenes wait for actors to reach their marks before playback begins.
+- Used story flags to control when cutscenes can play and locked player input during playback.
 </div>
-<img class="project-feature-image" src="/assets/intothedepths/procedural.png" alt="Procedural Dungeon Generation" />
+<video class="project-feature-image" src="/assets/Projects/Spirit/cutscene.mp4" controls autoplay muted playsinline loop></video>
 </div>
 
 <div class="project-feature">
 <div markdown="1" class="project-feature-content">
 
-## Enemy Design
-Each enemy was designed to provide a unique challenge to the player, with a variety of different moves and conditions they apply to the player. With help from artist Yuuki Matsuda, we were able to create a large cast of fantasy creatures for the player to encounter.
+## Combat System
+
+- Built initiative-based turn order and target selection for single combatants, groups, and actions that affect both sides. Invalid targets are filtered out.
+- Designed Clint’s multi-strike attacks around directional strike zones. Each input is scored as a miss, OK, or perfect and adjusts that strike’s power.
+- Built Kally’s spellcasting around a randomized pool of words. Players combine available words to determine a spell’s effects and power.
 </div>
-<img class="project-feature-image" src="/assets/intothedepths/enemydesign.png" alt="Enemy Design" />
+<video class="project-feature-image" src="/assets/Projects/Spirit/combat.mp4" controls autoplay muted playsinline loop></video>
+</div>
+
+<div class="project-feature">
+<div markdown="1" class="project-feature-content">
+
+## Level & Overworld Zone System
+
+- Built reusable loading zones and entrance markers that place the party at the correct entry point when moving between areas.
+- Coordinated player repositioning, camera bounds, music, and ambience during zone transitions, with optional fades and input locking.
+- Queued post-battle events so combat outcomes can update story flags, remove NPCs, or trigger follow-up cutscenes.
+</div>
+<video class="project-feature-image" src="/assets/Projects/Spirit/overworld.mp4" controls autoplay muted playsinline loop></video>
 </div>
