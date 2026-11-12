@@ -3,7 +3,7 @@ layout: jerules
 title: Running Journey’s End
 content_type: Journey’s End 
 headers:
-    - gm-mechanics
+    - GM-mechanics
     - general-guidance
 order: 4
 ---
@@ -80,7 +80,7 @@ The end of a Journey is often a grand moment, bittersweet as your group bids far
 
 When the curtains draw for the final time of this Journey, it is finally laid to rest and should your group decide to, you may start looking forward to the next Journey.
 
-# GM Mechanics {#gm-mechanics}
+# GM Mechanics {#GM-mechanics}
 
 The following sections are mechanics and rules specifically for you, the GM. These are also more specific pieces of advice on how to operate certain parts of Journey’s End during a session.
 
@@ -105,8 +105,6 @@ If you determined there is difficulty to their Action, then assess exactly how d
 
 The difficulty you choose does not have to be in multiples of 5, as you can place the DC somewhere in between. Also, you, as the GM, can choose whether to reveal the DC before the players roll, after, or to keep it secret.
 
-### 
-
 ### Guaranteeing a Check
 
 Sometimes, the players really need to succeed on a check. Or, their roll is so close that it is soul-crushing to fail it. When this happens, you may offer them a choice to succeed instead of failing in exchange for one of the following:
@@ -128,8 +126,6 @@ Maybe the player is trying to make an **Agility check** through deep snow that w
 
 You might be wondering why not just increase the **DC** of the **check**? You certainly can, but the **DC** can often make **checks** feel ridiculously easy or difficult, whereas advantage and disadvantage give players a more tangible feeling of how the stakes change.
 
-## 
-
 ## GM Actions
 
 As described in the **Rules of Play** section, you will often take the **Focus** from the players in order to advance the world, environment, and adversaries to the party. When you do so, it is important to know what to do with the **Focus**.
@@ -145,8 +141,6 @@ When the players rolled a success, you usually take **Focus** to describe how th
 
 What is important is to make sure NOT to undermine their success. Did a player just manage to knock an enemy off their feet? Maybe have the enemy try to drag the player down with them instead of having them just stand up without any consequences. That isn’t to say you should never immediately reverse an effect, but those moments should be reserved for powerful adversaries to show how dire the situation is.
 
-### 
-
 #### Players rolled a Failure
 
 When the players rolled a failure, you usually take the **Focus** to describe how the players failed to advance in their goals. Sometimes, you might also spend **Doom** to further complicate their objective.
@@ -160,8 +154,6 @@ When you take the Focus in combat, you’ll almost always use it to make an enem
 <div class="break"></div>
 
 You make attacks and actions the exact same as a player would given those abilities.
-
-## 
 
 ## Doom
 
@@ -242,8 +234,6 @@ Usually, you give Equipment to players as a quest reward or for finding it in th
 <div class="break"></div>
 
 At character creation, players choose from a list of starting equipment. If you choose so, you can also allow players to choose from a list of starting magical items.
-
-## 
 
 ## Economy
 

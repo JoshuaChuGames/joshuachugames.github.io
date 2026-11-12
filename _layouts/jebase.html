@@ -17,7 +17,32 @@ page_type: je
             {% if rule.headers != empty and rule.url == page.url %}
                 {% for header in rule.headers %}
                 <a class="header" href="{{ rule.url | relative_url }}#{{ header }}">
-                    {{ header | replace: '-', ' ' | capitalize }}
+                    {% assign minor_words = "a,an,and,as,at,but,by,for,in,nor,of,on,or,so,the,to,up,yet" | split: "," %}
+                    {% assign header_words = header | replace: '-', ' ' | split: ' ' %}
+                    {% assign formatted_header = '' %}
+
+                    {% for word in header_words %}
+                        {% assign lower_word = word | downcase %}
+                        {% assign upper_word = word | upcase %}
+
+                        {% if word == upper_word %}
+                            {% assign formatted_word = word %}
+                        {% elsif forloop.first or forloop.last %}
+                            {% assign formatted_word = word | capitalize %}
+                        {% elsif minor_words contains lower_word %}
+                            {% assign formatted_word = lower_word %}
+                        {% else %}
+                            {% assign formatted_word = word | capitalize %}
+                        {% endif %}
+
+                        {% unless forloop.first %}
+                            {% assign formatted_header = formatted_header | append: ' ' %}
+                        {% endunless %}
+
+                        {% assign formatted_header = formatted_header | append: formatted_word %}
+                    {% endfor %}
+
+                    {{ formatted_header }}
                 </a>
                 {% endfor %}
             {% endif %}
@@ -29,8 +54,9 @@ page_type: je
 <section class="intro-content">
     <div class="breadcrumb">
         {% assign collection = page.collection | replace: 'je-', '' | replace: '-', ' ' %}
+        {% assign collection_words = collection | split: ' ' %}
         <a href="{{ '/journeysend/' | relative_url }}">Journey's End</a> &gt;
-        <a href="{{ '/journeysend/' | relative_url }}#{{ collection }}">{{ collection | capitalize }}</a> &gt;
+        <a href="{{ '/journeysend/' | relative_url }}#{{ collection }}">{% for word in collection_words %}{{ word | capitalize }}{% unless forloop.last %} {% endunless %}{% endfor %}</a> &gt;
         <span id="bread-crumb-title">{{ page.title }}</span>
     </div>
     
@@ -40,7 +66,16 @@ page_type: je
         {% else %}
         <h1 id="content-title">{{ page.title }}</h1>
         {% endif %}
-        <p class="content-type">{{page.class | default: ''}} {{ page.content_type | default: page.collection | capitalize | replace: '-', ' ' }}</p>
+        <p class="content-type">{{page.class | default: ''}} 
+            {% if page.content_type %}
+                {{ page.content_type }}
+            {% else %}
+                {% for word in collection_words %}
+                    {{ word | capitalize }}
+                    {% unless forloop.last %} {% endunless %}
+                {% endfor %}
+            {% endif %}
+        </p>
     </div>            
 </section>
 

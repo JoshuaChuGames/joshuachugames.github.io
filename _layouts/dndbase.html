@@ -4,7 +4,8 @@ layout: dnd
 <section class="intro-content">
     <div class="breadcrumb">
         <a href="{{ '/dnd/' | relative_url }}">D&D Homebrew</a> &gt; 
-        <a href="{{ '/dnd/' | relative_url }}#{{ page.collection }}">{{ page.collection | capitalize | replace: '-', ' ' }}</a> &gt; 
+        {% assign collection_words = page.collection | replace: '-', ' ' | split: ' ' %}
+        <a href="{{ '/dnd/' | relative_url }}#{{ page.collection }}">{% for word in collection_words %}{{ word | capitalize }}{% unless forloop.last %} {% endunless %}{% endfor %}</a> &gt; 
         <span id="bread-crumb-title">{{ page.title }}</span>
     </div>
     
@@ -14,7 +15,7 @@ layout: dnd
         {% else %}
         <h1 id="content-title">{{ page.title }}</h1>
         {% endif %}
-        <p class="content-type">{{page.class | default: ''}} {{ page.content_type | default: page.collection | capitalize | replace: '-', ' ' }}</p>
+        <p class="content-type">{{page.class | default: ''}} {% if page.content_type %}{{ page.content_type }}{% else %}{% for word in collection_words %}{{ word | capitalize }}{% unless forloop.last %} {% endunless %}{% endfor %}{% endif %}</p>
     </div>            
 </section>
 
