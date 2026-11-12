@@ -6,7 +6,7 @@ page_type: je
 <link rel="stylesheet" href="/journeysend/jestyles.css">
 {% if page.collection == 'je-ruleset' %}
 <div class="rules-layout">
-    <aside class="rules-toc" aria-label="Rules table of contents">
+    <div class="rules-toc" aria-label="Rules table of contents">
         <h2>Rules</h2>
         <nav>
             {% assign rules = site.je-ruleset | sort: "order" %}
@@ -14,9 +14,16 @@ page_type: je
             <a href="{{ rule.url | relative_url }}" {% if page.url == rule.url %}aria-current="page"{% endif %}>
                 {{ rule.title }}
             </a>
+            {% if rule.headers != empty and rule.url == page.url %}
+                {% for header in rule.headers %}
+                <a class="header" href="{{ rule.url | relative_url }}#{{ header }}">
+                    {{ header | replace: '-', ' ' | capitalize }}
+                </a>
+                {% endfor %}
+            {% endif %}
             {% endfor %}
         </nav>
-    </aside>
+    </div>
     <div class="rules-main">
 {% endif %}
 <section class="intro-content">

@@ -44,6 +44,11 @@
 .je-content {
     padding: 12px 0 32px 0
 }
+.je-content h1[id],
+.je-content h2[id],
+.je-content h3[id] {
+    scroll-margin-top: 4.5rem;
+}
 
 .rules-layout {
     display: flex;
@@ -51,7 +56,17 @@
     gap: 2rem;
 }
 
+.rules-layout .je-content h1 {
+    text-decoration: underline;
+}
+
+.rules-layout .je-content > h1:not(:first-of-type) {
+    margin-top: 1.65rem;
+}
+
 .rules-toc {
+    position: sticky;
+    top: 8rem;
     margin: 12px 0 1rem;
     padding: 1rem;
     border: 1px solid var(--border);
@@ -88,6 +103,14 @@
     background-color: var(--brand);
     color: var(--hfg);
 }
+
+.rules-toc a.header {
+    padding-left: 1.5rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    font-size: 0.9rem;
+}
+
 
 .rules-content {
     min-width: 0;
