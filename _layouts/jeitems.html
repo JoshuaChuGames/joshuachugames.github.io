@@ -1,0 +1,142 @@
+---
+layout: jebase
+---
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        loadItems();
+        document.querySelectorAll('.fa-star').forEach(icon => {
+            icon.title = 'Playtested Material';
+        });
+        document.querySelector('#content-container').classList.remove('content-loading');
+    });
+
+    function loadItems() {
+        //console.log('Loading spells');
+        const urlParams = new URLSearchParams(window.location.search);
+        //console.log(urlParams.get('subclass'));
+
+        let itemTypeFilter = urlParams.get('type');
+
+        console.log(itemTypeFilter);
+
+        if (itemTypeFilter) {
+            const tbody = document.querySelector('tbody');
+
+            //debugger;
+            for (const item of tbody.querySelectorAll('tr')) {
+                //console.log(spell.dataset.spelllists);
+                const itemLists = item.dataset.itemType;
+                if (itemLists.toLowerCase().includes(itemTypeFilter.toLowerCase())) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            }
+
+            itemTypeFilter = itemTypeFilter.replace(/-/g, ' ');
+
+            document.title = `${capitalize(itemTypeFilter)} Items - Joshua Chu D&D Homebrew`;
+            document.getElementById('content-title').innerHTML = `${capitalize(itemTypeFilter)} Items`;
+            document.getElementById('bread-crumb-title').innerHTML = `${capitalize(itemTypeFilter)} Items`;
+        }
+    }
+
+    function capitalize(string) {
+        // Words that should not be capitalized in titles (except when they're the first or last word)
+        const lowercaseWords = ['a', 'an', 'and', 'as', 'at', 'but', 'by', 'for', 'if', 'in', 'nor', 'of', 'on', 'or', 'per', 'so', 'the', 'to', 'up', 'via', 'yet'];
+        
+        return string
+            .toLowerCase()
+            .split(' ')
+            .map((word, index, array) => {
+                // Always capitalize first and last words
+                if (index === 0 || index === array.length - 1) {
+                    return word.charAt(0).toUpperCase() + word.slice(1);
+                }
+                // Capitalize if not in the lowercase words list
+                if (!lowercaseWords.includes(word)) {
+                    return word.charAt(0).toUpperCase() + word.slice(1);
+                }
+                // Keep lowercase for articles, prepositions, conjunctions
+                return word;
+            })
+            .join(' ');
+    }
+
+    function filterByTier(tier) {
+        const tbody = document.querySelector('tbody');
+        for (const item of tbody.querySelectorAll('tr')) {
+            if ((item.dataset.tier.toLowerCase() == tier.toLowerCase() || tier.toLowerCase() == 'all') && !item.classList.contains('hidden')) {
+                item.style.display = 'table-row';
+            } else {
+                item.style.display = 'none';
+            }
+        }
+
+        const currentButton = document.querySelector('.tab-button.active');
+        currentButton.classList.remove('active');
+
+        const newButton = document.querySelector(`.tab-button[data-tier="${tier}"]`);
+        newButton.classList.add('active');
+    }
+</script>
+
+<div class="items-container">
+    <div class="rarity-tabs">
+        <button class="tab-button active" data-tier="all" onclick="filterByTier('all')">All Items</button>
+        <button class="tab-button" data-tier="1" onclick="filterByTier('1')">Tier 1</button>
+        <button class="tab-button" data-tier="2" onclick="filterByTier('2')">Tier 2</button>
+        <button class="tab-button" data-tier="3" onclick="filterByTier('3')">Tier 3</button>
+        <button class="tab-button" data-tier="4" onclick="filterByTier('4')">Tier 4</button>
+        <button class="tab-button" data-tier="5" onclick="filterByTier('5')">Tier 5</button>
+    </div>
+
+    <table class="table-wrapper spell-list items-list">
+        <thead>
+            <tr>
+                <th><i class="fa-solid fa-star"></i></th>
+                <th>Item Name</th>
+                <th>Type</th>
+                <th>Tier</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% assign sorted_items = site.je-items %}
+            {% assign sorted_items = sorted_items | group_by: "tier" %}
+            {% assign sorted_items = sorted_items | sort: "name" %}
+            {% for group in sorted_items %}
+            {% assign g = group.items | sort: "title" %}
+            {% for item in g %}
+            {% if item.content_type == 'Equipment' %}
+        
+            <tr data-item-type="{{ item.item_type }}" data-item-subtype="{{ item.item_subtype | join: ',' }}" data-tier="{{ item.tier }}">
+                <td>
+                    {% if item.finished %}
+                    <i class="fa-solid fa-star"></i>
+                    {% endif %}
+                </td>
+                <td><a href="{{ item.url }}">{{ item.title }}</a></td>
+                <td>
+                    {{ item.item_type }}
+                </td>
+                <td>{{ item.tier }}</td>
+                <td>
+                    {% if item.item_type == 'Weapon' %}
+                        <p class="italic">{{ item.trait }}, {{ item.range }}, {{ item.damage }}, {{ item.burden }}</p>
+                    {% elsif item.item_type == 'Armor' %}
+                        <p class="italic">{{ item.damage_thresholds }}</p>
+                    {% endif %}
+                    {{ item.content }}
+                </td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+

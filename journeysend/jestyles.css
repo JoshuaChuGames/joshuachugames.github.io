@@ -1,0 +1,251 @@
+/* ==========================================================================
+   CSS VARIABLES
+   ========================================================================== */
+
+:root {
+    --header-bg: rgba(15, 15, 15, 1.0);
+    --header-bg-light: rgba(195, 195, 195, 1.0);
+    --header-fg: rgba(250, 250, 250, 1.0);
+    --bg-light: #fcf9f4;
+    --bg: #f3eee5;
+    --fg: #242322;
+    --hfg:#f3f1e9;
+    --muted: #2e3033;
+    --inactive: #666666;
+    --hmuted: #a8b3c2;
+    --brand: #776936;
+    --card: #131720;
+    --card-light: #1a1f2c;
+    --accent: #ffd166;
+    --border: rgba(0, 0, 0, 0.2);
+    --border-exhaust: rgba(158, 18, 18, 0.555);
+    --white-hover: #dadada;
+    --white-active: #d4d4d4;
+}
+
+/* ==========================================================================
+   RESET & BASE STYLES
+   ========================================================================== */
+
+
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
+
+/* ==========================================================================
+   LAYOUT COMPONENTS
+   ========================================================================== */
+
+
+/* ==========================================================================
+   CONTENT COMPONENTS
+   ========================================================================== */
+
+.je-content {
+    padding: 12px 0 32px 0
+}
+.je-content h1[id],
+.je-content h2[id],
+.je-content h3[id] {
+    scroll-margin-top: 4.5rem;
+}
+
+.rules-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.rules-layout .je-content h1 {
+    text-decoration: underline;
+}
+
+.rules-layout .je-content > h1:not(:first-of-type) {
+    margin-top: 1.65rem;
+}
+
+.rules-toc {
+    position: sticky;
+    top: 8rem;
+    margin: 12px 0 1rem;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg-light);
+}
+
+.rules-toc h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.1rem;
+}
+
+.rules-toc nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    align-items: stretch;
+    justify-content: flex-start;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.rules-toc a {
+    color: var(--fg);
+    padding: 0.35rem 0.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    text-wrap: nowrap;
+}
+
+.rules-toc a:hover,
+.rules-toc a[aria-current="page"] {
+    background-color: var(--brand);
+    color: var(--hfg);
+}
+
+.rules-toc a.header {
+    padding-left: 1.5rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    font-size: 0.9rem;
+}
+
+
+.rules-content {
+    min-width: 0;
+}
+
+.rules-main {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+@media (max-width: 800px) {
+    .rules-layout {
+        display: block;
+    }
+
+    .rules-toc {
+        width: auto;
+        margin: 1rem;
+    }
+}
+
+.main-buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 3rem;
+    margin: 1rem auto;
+}
+
+.rules-button {
+    display: block;
+    background-color: var(--brand);
+    border: 1px solid var(--brand);
+    color: var(--hfg);
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.rules-button:hover {
+    background-color: var(--hfg);
+    border: 1px solid var(--brand);
+    color: var(--brand);
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   MARKDOWN CONTENT STYLES
+   ========================================================================== */
+
+
+/* ==========================================================================
+   DYNAMIC CONTENT PAGE STYLES
+   ========================================================================== */
+
+/* ==========================================================================
+   UTILITY COMPONENTS
+   ========================================================================== */
+
+
+/* ==========================================================================
+   SPELL PROPERTIES
+   ========================================================================== */
+
+
+/* ==========================================================================
+   TABLES
+   ========================================================================== */
+.spell-list th:nth-child(1),
+.spell-list td:nth-child(1) {
+    width: 5%; /* Star column - very narrow */
+    text-align: center;
+}
+
+.spell-list th:nth-child(2),
+.spell-list td:nth-child(2) {
+    width: 20%; /* Spell name - takes up most space */
+}
+
+.spell-list th:nth-child(3),
+.spell-list td:nth-child(3) {
+    width: 5%; /* Level column */
+}
+
+.spell-list th:nth-child(4),
+.spell-list td:nth-child(4) {
+    width: 20%; /* Use column */
+    max-width: 20%;
+}
+
+.spell-list th:nth-child(5),
+.spell-list td:nth-child(5) {
+    width: 15%; /* Learn Cost column */
+    max-width: 15%;
+}
+
+.spell-list th:nth-child(6),
+.spell-list td:nth-child(6) {
+    width: 40%; /* Available For column */
+    max-width: 40%;
+}
+
+.items-list th:nth-child(1),
+.items-list td:nth-child(1) {
+    width: 5%; /* Star column - very narrow */
+    max-width: 5%;
+    text-align: center;
+}
+
+.items-list th:nth-child(2),
+.items-list td:nth-child(2) {
+    width: 25%; /* Item name - takes up most space */
+    max-width: 25%;
+}
+
+.items-list th:nth-child(3),
+.items-list td:nth-child(3) {
+    width: 10%; /* Type column */
+    max-width: 10%;
+}
+
+.items-list th:nth-child(4),
+.items-list td:nth-child(4) {
+    width: 10%; /* tier column */
+    max-width: 10%;
+}
+
+.items-list th:nth-child(5),
+.items-list td:nth-child(5) {
+    width: 50%; /* Description column */
+    max-width: 50%;
+}
+
+.items-list td:nth-child(5) p {
+    font-size: clamp(0.65rem, 1.5vw, 0.85rem);
+}

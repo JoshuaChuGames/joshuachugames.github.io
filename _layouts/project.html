@@ -4,8 +4,14 @@ layout: base
 <section class="hero small">
     <div class="hero-body">
         <video autoplay muted playsinline loop>
-            <source src="/assets/hero_2.mp4" type="video/mp4">
+            {% assign hero = page.hero %}
+            {% if hero %}
+            <source src="{{ hero | relative_url }}" type="video/mp4">
             Your browser does not support the video tag.
+            {% else %}
+            <source src="/assets/hero_2.mp4" type="video/mp4">
+            {% endif %}
+            
         </video>
         <div class="hero-content text-centered line-height-small small">
             <div class="bottom-line all-caps">
@@ -29,9 +35,15 @@ layout: base
 </section>
 
 <section class="content-section project-content">
+    
+    {% if page.warning %}
+    <div class="project-warning">
+        <h4 class="dark bold text-centered">{{ page.warning }}</h4>
+    </div>
+    {% endif %}
     <div class="project-description">
         <h1 class="text-centered all-caps bottom-line dark">About {{ page.title }}</h1>
-        <p class="dark">{{ page.description }}</p>
+        <p class="dark  text-centered">{{ page.description }}</p>
     </div>
     {% assign media = page.media %}
     <!-- <div class="project-media-container">
@@ -41,6 +53,7 @@ layout: base
             {% endif %}
         {% endfor %}
     </div> -->
+    {% if media.size > 0 %}
     <h1 class="text-centered all-caps bottom-line dark">Dev Logs</h1>   
     <div class="project-media-container">
         {% for item in media %}
@@ -52,6 +65,7 @@ layout: base
             {% endif %}
         {% endfor %}
     </div>
+    {% endif %}
     <h1 class="text-centered all-caps bottom-line dark">My Contributions</h1>   
     {{ content }}
 </section> 
