@@ -1,0 +1,20 @@
+---
+layout: jebase
+---
+
+<div class="item-properties">
+    {% assign flavortext = page.item_type %}
+    <span class="italic">Tier {{ page.tier }} {{ flavortext }}</span>
+    <div class="break"></div>
+</div>
+{{ content }}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.fa-star').forEach(icon => {
+            icon.title = 'Playtested Material';
+        });
+    });
+</script>
+
+

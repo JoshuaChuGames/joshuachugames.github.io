@@ -1,0 +1,130 @@
+---
+layout: jebase
+---
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        loadAbilities();
+        document.querySelectorAll('.fa-star').forEach(icon => {
+            icon.title = 'Playtested Material';
+        });
+    });
+
+    function loadAbilities() {
+        //console.log('Loading spells');
+        const urlParams = new URLSearchParams(window.location.search);
+        //console.log(urlParams.get('subclass'));
+
+        let abilityListFilter = urlParams.get('type')?.toLowerCase();
+        let classFilter = urlParams.get('class')?.toLowerCase();
+
+
+        if (abilityListFilter) {
+            const tbody = document.querySelector('tbody');
+
+            for (const ability of tbody.querySelectorAll('tr')) {
+                const abilityLists = ability.dataset.abilitylists.split(',');
+                if (abilityLists.includes(abilityListFilter) && (!classFilter || abilityLists.includes(classFilter))) {
+                    ability.style.display = 'table-row';
+                } else {
+                    ability.style.display = 'none';
+                }
+            }
+
+            abilityListFilter = abilityListFilter.replace(/-/g, ' ');
+
+            
+            if (!classFilter) {
+                document.getElementById('content-title').innerHTML = `All ${capitalize(abilityListFilter)}`;
+                document.getElementById('bread-crumb-title').innerHTML = `All ${capitalize(abilityListFilter)}`;
+                document.title = `All ${capitalize(abilityListFilter)} - Joshua Chu D&D Homebrew`;
+            
+            } else {
+                document.getElementById('content-title').innerHTML = `${capitalize(classFilter)} ${capitalize(abilityListFilter)}`;
+                document.getElementById('bread-crumb-title').innerHTML = `${capitalize(classFilter)} ${capitalize(abilityListFilter)}`;
+                document.title = `${capitalize(classFilter)} ${capitalize(abilityListFilter)} - Joshua Chu D&D Homebrew`;
+            }
+        }
+    }
+
+    function capitalize(string) {
+        // Words that should not be capitalized in titles (except when they're the first or last word)
+        const lowercaseWords = ['a', 'an', 'and', 'as', 'at', 'but', 'by', 'for', 'if', 'in', 'nor', 'of', 'on', 'or', 'per', 'so', 'the', 'to', 'up', 'via', 'yet'];
+        
+        return string
+            .toLowerCase()
+            .split(' ')
+            .map((word, index, array) => {
+                // Always capitalize first and last words
+                if (index === 0 || index === array.length - 1) {
+                    return word.charAt(0).toUpperCase() + word.slice(1);
+                }
+                // Capitalize if not in the lowercase words list
+                if (!lowercaseWords.includes(word)) {
+                    return word.charAt(0).toUpperCase() + word.slice(1);
+                }
+                // Keep lowercase for articles, prepositions, conjunctions
+                return word;
+            })
+            .join(' ');
+    }
+</script>
+<table class="table-wrapper spell-list">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Ability Name</th>
+            <th>Tier</th>
+            <th>Use Cost</th>
+            <th>Learn Cost</th>
+            <th>Available For</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% assign spells = site.je-spells %}
+        {% assign techniques = site.je-techniques %}
+        {% assign sorted_abilities = spells | concat: techniques | sort: 'tier' %}
+        {% for ability in sorted_abilities %}
+            {% if ability.content_type == 'Spell' or ability.content_type == 'Technique' %}
+            {% assign tags = '' | split: '' %}
+            {% for list in ability.spell_lists %}
+                {% assign slug = list.list | downcase | replace: ' ', '-' %}
+                {% assign tags = tags | push: slug %}
+            {% endfor %}
+            {% if ability.content_type == 'Spell' %}
+                {% assign tags = tags | push: 'spells' %}
+            {% endif %}
+            {% if ability.content_type == 'Technique' %}
+                {% assign tags = tags | push: 'techniques' %}
+            {% endif %}
+            
+    
+        <tr data-abilitylists="{{ tags | uniq | join: ',' }}">
+            <td>
+                {% if ability.finished %}
+                <i class="fa-solid fa-star"></i>
+                {% endif %}
+            </td>
+            <td><a href="{{ ability.url }}">{{ ability.title }}</a></td>
+            <td>
+                <span class="italic">{{ ability.tier }}</span>
+            </td>
+            <td>
+                {{ ability.use_cost }}
+                {% if ability.concentration %}
+                     (Concentration)
+                {% endif %}
+            </td>
+            <td>
+                {{ ability.learn_cost }}
+            </td>
+            <td>
+                {% for list in ability.spell_lists %}
+                    {{ list.list }}{% unless forloop.last %}, {% endunless %}
+                {% endfor %}
+            </td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+    </tbody>
+</table>

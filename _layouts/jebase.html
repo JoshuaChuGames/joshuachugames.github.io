@@ -1,0 +1,46 @@
+---
+layout: je
+page_type: je
+---
+
+<link rel="stylesheet" href="/journeysend/jestyles.css">
+{% if page.collection == 'je-ruleset' %}
+<div class="rules-layout">
+    <aside class="rules-toc" aria-label="Rules table of contents">
+        <h2>Rules</h2>
+        <nav>
+            {% assign rules = site.je-ruleset | sort: "order" %}
+            {% for rule in rules %}
+            <a href="{{ rule.url | relative_url }}" {% if page.url == rule.url %}aria-current="page"{% endif %}>
+                {{ rule.title }}
+            </a>
+            {% endfor %}
+        </nav>
+    </aside>
+    <div class="rules-main">
+{% endif %}
+<section class="intro-content">
+    <div class="breadcrumb">
+        {% assign collection = page.collection | replace: 'je-', '' | replace: '-', ' ' %}
+        <a href="{{ '/journeysend/' | relative_url }}">Journey's End</a> &gt;
+        <a href="{{ '/journeysend/' | relative_url }}#{{ collection }}">{{ collection | capitalize }}</a> &gt;
+        <span id="bread-crumb-title">{{ page.title }}</span>
+    </div>
+    
+    <div id="content-header" class="content-header">
+        {% if page.finished %}
+        <h1 id="content-title">{{ page.title }} <i class="fa-solid fa-star"></i></h1>
+        {% else %}
+        <h1 id="content-title">{{ page.title }}</h1>
+        {% endif %}
+        <p class="content-type">{{page.class | default: ''}} {{ page.content_type | default: page.collection | capitalize | replace: '-', ' ' }}</p>
+    </div>            
+</section>
+
+<section class="je-content">
+        {{ content }}
+</section> 
+{% if page.collection == 'je-ruleset' %}
+    </div>
+</div>
+{% endif %}

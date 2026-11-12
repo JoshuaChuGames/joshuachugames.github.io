@@ -1,0 +1,82 @@
+---
+layout: je
+page_type: je
+---
+<script>
+    document.querySelectorAll('.fa-star').forEach(icon => {
+        icon.title = 'Playtested Material';
+    }); 
+</script>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <section class="intro-content">
+        <div class="section-content">
+            {% assign intro = site.je | where: "title", "Journey's End: A Frieren Inspired TTRPG" | first %}
+            <h1 class="title centered"> {{ intro.title }} </h1>
+            {{ intro.content }}
+
+            <div class="main-buttons">
+                <a class="rules-button" href="/journeysend/ruleset">View Rulebook</a>
+                <a class="rules-button" href="">Character Sheet</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="toc" class="section">
+        <div class="section-content">
+            <div class="toc-container">
+                 <div class="row">
+                     <div class="toc-item">
+                         <div class="content-icon fas fa-wand-magic-sparkles fa-6x"></div>
+                         <a href="/journeysend/#classes">Classes</a>
+                     </div>
+                     <div class="toc-item">
+                         <div class="content-icon fas fa-book fa-6x"></div>
+                         <a href="/journeysend/#Abilities">Abilities</a>
+                     </div>
+                     <div class="toc-item">
+                         <div class="content-icon fas fa-users fa-6x"></div>
+                         <a href="/journeysend/#races">Races</a>
+                     </div>
+                     <div class="toc-item">
+                         <div class="content-icon fas fa-shield fa-6x"></div>
+                         <a href="/journeysend/#items">Items</a>
+                     </div>
+                 </div>
+             </div>
+        </div>
+    </section>
+
+    <section id="classes" class="section">
+        <div class="section-content">
+            {% assign classes = site.content | where: "title", "Journey's End Classes" | first %}
+            {{ classes.content }}
+        </div>
+    </section>
+
+    <section id="abilities" class="section">
+        <div class="section-content">
+            {% assign abilities = site.content | where: "title", "Journey's End Abilities" | first %}
+            {{ abilities.content }}
+            <!-- Content will be loaded automatically -->
+        </div>
+    </section>
+    <section id="races" class="section">
+        <div class="section-content">
+            {% assign races = site.content | where: "title", "Journey's End Races" | first %}
+            {{ races.content }}
+            <!-- Content will be loaded automatically -->
+        </div>
+    </section>
+    <section id="items" class="section">
+        <div class="section-content">
+            {% assign items = site.content | where: "title", "Journey's End Items" | first %}
+            {{ items.content }}
+            <!-- Content will be loaded automatically -->
+        </div>
+    </section>
+    
+</body>
+</html>

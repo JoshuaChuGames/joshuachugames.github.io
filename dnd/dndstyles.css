@@ -213,7 +213,6 @@ nav {
     display: flex;
     align-items: stretch;
     justify-content: space-between;
-    overflow: hidden;
     margin: 0 auto; 
     padding: 0 48px;
     height: 3.5rem;
@@ -224,11 +223,28 @@ nav {
     display: flex;
 }
 
-.navbar-item {
+.navbar-name {
     color: var(--header-fg);
     font-size: 18px;
     font-weight: 600;
     text-align: center;
+}
+
+.navbar-item {
+    position: relative;
+}
+
+.navbar-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+}
+
+.navbar-item:hover > .navbar-dropdown,
+.navbar-item:focus-within > .navbar-dropdown {
+  display: block;
 }
 
 .navbar-links {
@@ -237,12 +253,20 @@ nav {
 }
 
 .navbar-link {
+    display: block;
     font-size: 18px;
     color: var(--header-fg);
     text-align: center;
     text-transform: uppercase;
     text-decoration: none !important;
     padding: 12px;
+}
+
+.navbar-dropdown .navbar-link {
+    background: var(--header-bg);
+    font-size: 16px;
+    padding: 8px;
+    white-space: nowrap;
 }
 
 .navbar-link:hover {

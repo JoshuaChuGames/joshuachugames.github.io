@@ -56,6 +56,29 @@ collections:
     output: true
     permalink: /dnd/content/:name/
 
+# Journey's End Collections ---------------
+  je:
+    output: true
+    permalink: /journeysend/:name/
+  je-ruleset:
+    output: true
+    permalink: /journeysend/ruleset/:name/
+  je-classes:
+    output: true
+    permalink: /journeysend/classes/:name/
+  je-spells:
+    output: true
+    permalink: /journeysend/spells/:name/
+  je-techniques:
+    output: true
+    permalink: /journeysend/techniques/:name/
+  je-races:
+    output: true
+    permalink: /journeysend/races/:name/
+  je-items:
+    output: true
+    permalink: /journeysend/items/:name/
+
 defaults:
   # Portfolio Defaults ---------------
   - scope: { type: games }

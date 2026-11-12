@@ -1,0 +1,59 @@
+---
+layout: jebase
+---
+
+<span class="italic">Tier {{ page.tier }}</span>
+
+<div class="break"></div> 
+
+<div class="spell-properties">
+    <div class="spell-property">
+      {% if page.concentration %}
+        <span class="bold">Use Cost:</span> {{ page.use_cost }} (Concentration)
+      {% else %}
+        <span class="bold">Use Cost:</span> {{ page.use_cost }}
+      {% endif %}
+    </div>
+    <div class="spell-property">
+        <span class="bold">Learn Cost:</span> {{ page.learn_cost }}
+    </div>
+</div>
+<div class="break"></div>
+{{ content }}
+<div class="break"></div>
+<div class="spell-lists">
+    {% if page.spell_lists %}
+      <span class="bold">Spell Lists:</span>
+      {% assign spell_link_items = '' | split: ', ' %}
+      {% assign known_class = false %}
+      {% for list in page.spell_lists %}
+        {% for class in site.je-classes %}
+          {% if class.class == list.list %}
+            {% assign link = '<a href="' | append: class.url | append: '">' | append: class.class | append: '</a>' %}
+            {% assign spell_link_items = spell_link_items | push: link %}
+            {% assign known_class = true %}
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+      {% if known_class %}
+        {{ spell_link_items | join: ', ' }}
+      {% else %}
+        {% for list in page.spell_lists %}
+          {% assign spell_link_items = spell_link_items | push: list.list %}
+        {% endfor %}
+        {{ spell_link_items | join: ', ' }}
+      {% endif %}
+    {% endif %}
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+        document.querySelectorAll('.fa-star').forEach(icon => {
+            icon.title = 'Playtested Material';
+        });
+    });
+</script>
+
+
+
