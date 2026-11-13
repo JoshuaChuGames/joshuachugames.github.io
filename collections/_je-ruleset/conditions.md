@@ -3,7 +3,7 @@ layout: jerules
 title: Conditions
 content_type: Journey’s End 
 headers:
-order: 7
+order: 9
 ---
 
 # Conditions {#conditions}

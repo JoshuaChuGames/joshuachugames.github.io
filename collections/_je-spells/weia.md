@@ -3,7 +3,7 @@ layout: jeability
 content_type: Spell
 title: Weia
 tier: 2
-use_cost: 2 Mana (Concentration)
+use_cost: 2 Mana
 learn_cost: 4 Skill Point
 concentration: true
 spell_lists:

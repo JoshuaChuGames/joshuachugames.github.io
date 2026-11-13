@@ -5,7 +5,7 @@ content_type: Journey’s End
 headers:
  - tier-1-spells
  - tier-2-spells
-order: 8
+order: 7
 ---
 
 # Spells {#spells}
@@ -48,11 +48,11 @@ The description for the effect of the spell. Sections written in Bold denote Aug
 {{ spell.content }}
 <div class="break"></div>
 <div class="spell-lists">
-    {% if page.spell_lists %}
-      <span class="bold">Spell Lists:</span>
+    {% if spell.spell_lists %}
+      <span class="bold">Available For:</span>
       {% assign spell_link_items = '' | split: ', ' %}
       {% assign known_class = false %}
-      {% for list in page.spell_lists %}
+      {% for list in spell.spell_lists %}
         {% for class in site.je-classes %}
           {% if class.class == list.list %}
             {% assign link = '<a href="' | append: class.url | append: '">' | append: class.class | append: '</a>' %}
@@ -64,7 +64,7 @@ The description for the effect of the spell. Sections written in Bold denote Aug
       {% if known_class %}
         {{ spell_link_items | join: ', ' }}
       {% else %}
-        {% for list in page.spell_lists %}
+        {% for list in spell.spell_lists %}
           {% assign spell_link_items = spell_link_items | push: list.list %}
         {% endfor %}
         {{ spell_link_items | join: ', ' }}

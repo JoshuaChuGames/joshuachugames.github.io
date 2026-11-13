@@ -3,7 +3,7 @@ layout: jeability
 content_type: Spell
 title: Anvisieren
 tier: 1
-use_cost: 1 Mana (Concentration)
+use_cost: 1 Mana
 learn_cost: 2 Skill Point
 concentration: true
 spell_lists:
