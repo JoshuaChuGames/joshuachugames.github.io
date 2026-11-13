@@ -252,6 +252,14 @@ nav {
     align-items: center;
 }
 
+.mobile .navbar-links {
+    display: none;
+}
+
+.mobile .navbar-links.is-active {
+    display: flex;
+}
+
 .navbar-link {
     display: block;
     font-size: 18px;
@@ -274,12 +282,13 @@ nav {
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     header {
         display: none;
     }
 
     header.mobile {
+        display: block;
         position: sticky;
         top: 0;
         backdrop-filter: saturate(180%) blur(10px);

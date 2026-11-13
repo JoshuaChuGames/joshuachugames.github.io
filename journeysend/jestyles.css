@@ -79,6 +79,11 @@
     font-size: 1.1rem;
 }
 
+.rules-toc summary {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
 .rules-toc nav {
     display: flex;
     flex-direction: column;
@@ -127,6 +132,7 @@
     }
 
     .rules-toc {
+        position: static;
         width: auto;
         margin: 1rem;
     }

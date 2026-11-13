@@ -2,3 +2,29 @@
 layout: jebase
 ---
 {{ content }}
+
+{% assign rules = site.je-ruleset %}
+{% assign previous_order = page.order | minus: 1 %}
+{% assign next_order = page.order | plus: 1 %}
+
+{% assign previous_rule = nil %}
+{% assign next_rule = nil %}
+
+{% for rule in site.je-ruleset %}
+    {% if rule.order == previous_order %}
+        {% assign previous_rule = rule %}
+    {% endif %}
+
+    {% if rule.order == next_order %}
+        {% assign next_rule = rule %}
+    {% endif %}
+{% endfor %}
+
+<div class="main-buttons">
+{% if previous_rule != nil %}
+    <a href="{{ previous_rule.url }}" class="rules-button"> < {{ previous_rule.title }}</a>
+{% endif %}
+{% if next_rule != nil %}
+    <a href="{{ next_rule.url }}" class="rules-button">{{ next_rule.title }} > </a>
+{% endif %}
+</div>
