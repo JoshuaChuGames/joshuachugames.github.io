@@ -3,7 +3,7 @@ layout: base
 ---
 <section class="hero small">
     <div class="hero-body">
-        <video autoplay muted playsinline loop>
+        <video disablepictureinpicture autoplay muted playsinline loop>
             {% assign hero = page.hero %}
             {% if hero %}
             <source src="{{ hero | relative_url }}" type="video/mp4">
