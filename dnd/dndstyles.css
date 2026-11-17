@@ -254,6 +254,7 @@ nav {
 
 .mobile .navbar-links {
     display: none;
+    
 }
 
 .mobile .navbar-links.is-active {

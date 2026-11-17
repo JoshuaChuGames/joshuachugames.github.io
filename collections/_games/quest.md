@@ -3,7 +3,12 @@ layout: project
 title: Quest!
 description: Quest is a 3D isometric tactics game inspired by tabletop RPGs. Players explore a hex-based overworld, discover randomized encounters, and fight turn-based battles where breaking cover can open new routes across the map.
 short_description: A 3D isometric tactics game where you explore a hex-based overworld, fight turn-based battles, and use cover to control the battlefield.
-projectlink: https://spiritboundstudios.itch.io/quest
+projectlinks: [
+    {
+        icon: "fa-brands fa-itch-io",
+        url: "https://redathena.itch.io/quest",
+    },
+]
 image: /assets/Projects/Quest/bannercardvertical.png
 hero: /assets/Projects/Quest/hero.mp4
 media: []

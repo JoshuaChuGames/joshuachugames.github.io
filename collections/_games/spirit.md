@@ -11,6 +11,7 @@ tags: [2D, Narrative, Godot]
 start_date: October 2025
 end_date: Present
 order: 3
+featured: true
 ---
 <div class="project-feature">
 <div markdown="1" class="project-feature-content">
